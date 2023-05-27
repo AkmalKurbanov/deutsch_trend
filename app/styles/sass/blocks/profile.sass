@@ -26,6 +26,14 @@
   
   &__img-block
     max-width: rem(365)
+    
+    @include lg
+      max-width: rem(300)
+
+    @include md
+      max-width: 100%
+    
+
 
     .title
       display: flex
@@ -63,22 +71,55 @@
   &__log-pass
     max-width: rem(765)
 
+    @include lg
+      max-width: rem(600)
+
+    @include md
+      max-width: calc( 50% - 10px )
+
+    @include sm
+      max-width: 100%  
+
     &-wrap
       margin-top: rem(15)
       columns: 2
       column-gap: rem(40)
+      
+      @include lg
+        column-gap: rem(20)
+
+      @include md
+        columns: 1
+          
 
   &__profile
+    position: relative
 
-    &-top
-      @include aic-jfcsb
-      margin-bottom: rem(25)
+    @include md
+      max-width: calc( 50% - 10px )  
 
-      .title
-        margin-bottom: 0!important
+    @include sm
+      max-width: 100%  
+  
+    
     &-wrap
       columns: 3
       column-gap: rem(55)
       margin-top: rem(15)
 
-  
+      @include lg
+        column-gap: rem(20)
+
+      @include md
+        columns: 1
+        
+
+  .agree
+    position: absolute
+    right: rem(35)
+    top: rem(45)
+
+    @include md
+      position: relative
+      top: auto
+      right: auto

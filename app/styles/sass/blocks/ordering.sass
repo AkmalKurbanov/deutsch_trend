@@ -2,20 +2,40 @@
   &__flex-wrap
     @include jfcsb
     
+    @include md
+      flex-direction: column
+
   &__flex-col
     width: 100%
     
     &:first-child
       max-width: rem(755)
-    
+      margin-right: rem(40)
+      
+      @include lg
+        margin-right: rem(20)
+
+      @include md  
+        max-width: 100%
+        margin-bottom: rem(30)
+        
     &:last-child
       max-width: rem(445)
+      
+      @include md  
+        max-width: 100%
       
   &__form-wrap
     @include fww-jfcsb
 
+    @include lg
+      flex-direction: column
+
     .input-wrap
       width: calc( 50% - 15px )
+
+      @include lg
+        width: 100%
 
       &--select
         width: 100%

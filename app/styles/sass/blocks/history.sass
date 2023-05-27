@@ -1,44 +1,195 @@
+// .table
+//   // width: 100%
+//   border-spacing: 0
+
+//   .btn
+//     display: inline-flex
+//     font-size: rem(16)
+
+//   tr
+//     th
+//       text-align: left
+//       border-bottom: rem(2) solid #e7e7e7
+//       text-transform: uppercase
+//       font-size: rem(20)
+//       font-weight: 500
+//       padding-bottom: rem(10)
+
+//       @include lg
+//         font-size: rem(14)     
+
+//     td
+//       color: rgba($dark, .6)
+//       font-size: rem(20)
+//       padding-top: rem(30) 
+
+//       @include lg
+//         font-size: rem(14)  
+//         padding-top: rem(20) 
+
+//       .btn
+//         white-space: nowrap
+
+//         @include lg
+//           font-size: rem(12)
+//           border-radius: rem(8)  
+
+//   &__date 
+//     width: rem(140)
+
+//     @include lg
+//       width: rem(100)
+
+//   &__course
+//     width: rem(405)
+
+//     @include lg
+//       width: rem(280)
+
+//     &-wrap
+//       @include aic
+
+//       img
+//         border-radius: rem(10)
+//         max-width: rem(145)
+//         width: 100%
+//         margin-right: rem(25)
+
+//         @include lg
+//           max-width: rem(100)
+//           border-radius: rem(5)
+//           margin-right: rem(15)
+
+//         @include md
+//           display: none  
+
+//   
 .table
-  // width: 100%
+  width: 100%
   border-spacing: 0
 
-  .btn
+  &__course-wrap,
+  &__price-wrap,
+  &__payment-wrap
     display: inline-flex
-    font-size: rem(16)
+    align-items: center
 
-  tr
-    th
-      text-align: left
-      border-bottom: rem(2) solid #e7e7e7
-      text-transform: uppercase
-      font-size: rem(20)
-      font-weight: 500
-      padding-bottom: rem(10)
+  &__price-wrap,
+  &__payment-wrap
+    justify-content: space-between
+    width: 100%  
+    
+    @include sm
+      flex-direction: column
+      align-items: flex-end
 
-      
+    .btn
+      white-space: nowrap
+      font-size: rem(16)
+      margin-left: rem(10)
 
-    td
-      color: rgba($dark, .6)
-      font-size: rem(20)
-      padding-top: rem(30) 
-  
+      @include lg
+        font-size: rem(12)
+        border-radius: rem(8)  
+
+      @include sm
+        margin-left: rem(10)
+        margin-top: rem(10)  
+
+
   &__date 
     width: rem(140)
 
+    @include lg
+      width: rem(100)
+
   &__course
     width: rem(405)
-
-    &-wrap
-      @include aic
-      
-      img
-        border-radius: rem(10)
-        max-width: rem(145)
-        width: 100%
-        margin-right: rem(25)
+    
+    @include lg
+      width: rem(280)
 
   &__price
     width: rem(100)
 
   &__payment
-    width: rem(300)
+    width: rem(515)
+    @include lg
+      width: rem(400)
+  
+  th
+    text-transform: uppercase
+    font-size: rem(20)
+    font-weight: 500
+    border-bottom: rem(2) solid #E7E7E7
+    display: table-cell 
+    text-align: left
+    padding-bottom: rem(10)
+
+    @include lg
+      font-size: rem(16)
+
+    @include md
+      font-size: rem(15)
+
+    @include sm
+      display: none
+  tr
+    &:last-child
+      td
+        &:last-child
+          border: none
+  td
+    display: table-cell 
+    font-size: rem(20)
+    color: rgba(#131313, .6)
+    padding: rem(15) rem(5) rem(15) 0
+
+    @include lg
+      font-size: rem(16) 
+      
+    @include md
+      font-size: rem(15) 
+    
+    @include sm
+      @include aic-jfcsb
+      width: 100%
+      text-align: right
+
+    &:last-child
+      padding-right: 0
+
+      @include sm
+        border-bottom: rem(2) solid #E7E7E7
+
+
+    &:before
+      content: attr(data-th)": "
+      font-weight: bold
+      display: none
+      min-width: rem(80)
+      max-width: rem(100)
+      width: 100%
+      color: $primary
+
+
+      @include sm
+        display: inline-block
+        text-align: left
+
+    img
+      border-radius: rem(10)
+      max-width: rem(145)
+      width: 100%
+      margin-right: rem(25)
+
+      @include lg
+        max-width: rem(100)
+        border-radius: rem(5)
+        margin-right: rem(15)
+
+      @include md
+        display: none
+
+  
+

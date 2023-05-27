@@ -1,5 +1,6 @@
 .not-found
-  padding: rem(100) 0
+  padding-top: rem(100)
+  padding-bottom: rem(100)
 
   &__window-wrap
     padding: rem(40) 0
@@ -39,13 +40,26 @@
     padding: rem(40)
     z-index: 2
     position: relative
+    
+    @include sm
+      padding: rem(30)
 
+    @media (max-width: 460px)  
+      padding: rem(20)
 
     .title
       @include aic
       margin-bottom: rem(20)
       line-height: rem(30)
       letter-spacing: normal
+      
+      @include sm
+        font-size: rem(20)
+        line-height: rem(20)
+
+      @media (max-width: 460px)
+        flex-direction: column
+
 
       span
         font-family: $userfont2
@@ -56,5 +70,17 @@
         margin-right: rem(30)
         letter-spacing: 0.1em
 
+        @include sm
+          font-size: rem(80)
+          line-height: rem(70)
+
+        @media (max-width: 460px)
+          margin-right: 0
+          margin-bottom: rem(20)  
+
+
     p
       margin-bottom: rem(40)
+      
+      @include sm
+        margin-bottom: rem(30)

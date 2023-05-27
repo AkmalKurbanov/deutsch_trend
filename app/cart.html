@@ -142,50 +142,27 @@
             <div class="cart__flex-col">
               <div class="typical-block">
                 <table class="table"> 
-                  <tr> 
-                    <th>Курс</th>
-                    <th>Ціна</th>
-                    <th></th>
-                  </tr>
-                  <tr> 
-                    <td class="table__course">
-                      <div class="table__course-wrap"><img loading="lazy" src="images/dist/beginners1.webp" alt="">Deutsch Basic 1 (A1.1)</div>
-                    </td>
-                    <td class="table__price">94.00€</td>
-                    <td> <a class="btn btn--primary" href="#"> 
-                        <div class="icon"> 
-                          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.87924 1.87939C2.03789 1.72074 2.29512 1.72074 2.45377 1.87939L11.1204 10.5461C11.2791 10.7047 11.2791 10.9619 11.1204 11.1206C10.9618 11.2792 10.7046 11.2792 10.5459 11.1206L1.87924 2.45392C1.72059 2.29527 1.72059 2.03804 1.87924 1.87939Z" fill="#131313"></path>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1204 1.87939C11.2791 2.03804 11.2791 2.29527 11.1204 2.45392L2.45377 11.1206C2.29512 11.2792 2.03789 11.2792 1.87924 11.1206C1.72059 10.9619 1.72059 10.7047 1.87924 10.5461L10.5459 1.87939C10.7046 1.72074 10.9618 1.72074 11.1204 1.87939Z" fill="#131313"></path>
-                          </svg>
-                        </div>Прибрати</a></td>
-                  </tr>
-                  <tr> 
-                    <td class="table__course">
-                      <div class="table__course-wrap"><img loading="lazy" src="images/dist/beginners2.webp" alt="">Deutsch Basic 1 (A2.1)</div>
-                    </td>
-                    <td class="table__price">94.00€</td>
-                    <td> <a class="btn btn--primary" href="#"> 
-                        <div class="icon"> 
-                          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.87924 1.87939C2.03789 1.72074 2.29512 1.72074 2.45377 1.87939L11.1204 10.5461C11.2791 10.7047 11.2791 10.9619 11.1204 11.1206C10.9618 11.2792 10.7046 11.2792 10.5459 11.1206L1.87924 2.45392C1.72059 2.29527 1.72059 2.03804 1.87924 1.87939Z" fill="#131313"></path>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1204 1.87939C11.2791 2.03804 11.2791 2.29527 11.1204 2.45392L2.45377 11.1206C2.29512 11.2792 2.03789 11.2792 1.87924 11.1206C1.72059 10.9619 1.72059 10.7047 1.87924 10.5461L10.5459 1.87939C10.7046 1.72074 10.9618 1.72074 11.1204 1.87939Z" fill="#131313"></path>
-                          </svg>
-                        </div>Прибрати</a></td>
-                  </tr>
-                  <tr> 
-                    <td class="table__course">
-                      <div class="table__course-wrap"><img loading="lazy" src="images/dist/beginners3.webp" alt="">Deutsch Basic 1 (A2.1)</div>
-                    </td>
-                    <td class="table__price">94.00€</td>
-                    <td> <a class="btn btn--primary" href="#"> 
-                        <div class="icon"> 
-                          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.87924 1.87939C2.03789 1.72074 2.29512 1.72074 2.45377 1.87939L11.1204 10.5461C11.2791 10.7047 11.2791 10.9619 11.1204 11.1206C10.9618 11.2792 10.7046 11.2792 10.5459 11.1206L1.87924 2.45392C1.72059 2.29527 1.72059 2.03804 1.87924 1.87939Z" fill="#131313"></path>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1204 1.87939C11.2791 2.03804 11.2791 2.29527 11.1204 2.45392L2.45377 11.1206C2.29512 11.2792 2.03789 11.2792 1.87924 11.1206C1.72059 10.9619 1.72059 10.7047 1.87924 10.5461L10.5459 1.87939C10.7046 1.72074 10.9618 1.72074 11.1204 1.87939Z" fill="#131313"></path>
-                          </svg>
-                        </div>Прибрати</a></td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <th>Курс</th>
+                      <th>Ціна</th>
+                    </tr>
+                    <tr>
+                      <td class="table__course" data-th="Курс">
+                        <div class="table__course-wrap"><img loading="lazy" src="images/dist/beginners1.webp" alt="">Deutsch Basic 1 (A1.1)</div>
+                      </td>
+                      <td class="table__price" data-th="Ціна">
+                        <div class="table__price-wrap">
+                           94.00€<a class="btn btn--primary" href="#"> 
+                            <div class="icon"> 
+                              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.87924 1.87939C2.03789 1.72074 2.29512 1.72074 2.45377 1.87939L11.1204 10.5461C11.2791 10.7047 11.2791 10.9619 11.1204 11.1206C10.9618 11.2792 10.7046 11.2792 10.5459 11.1206L1.87924 2.45392C1.72059 2.29527 1.72059 2.03804 1.87924 1.87939Z" fill="#131313"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1204 1.87939C11.2791 2.03804 11.2791 2.29527 11.1204 2.45392L2.45377 11.1206C2.29512 11.2792 2.03789 11.2792 1.87924 11.1206C1.72059 10.9619 1.72059 10.7047 1.87924 10.5461L10.5459 1.87939C10.7046 1.72074 10.9618 1.72074 11.1204 1.87939Z" fill="#131313"></path>
+                              </svg>
+                            </div>Прибрати</a></div>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>

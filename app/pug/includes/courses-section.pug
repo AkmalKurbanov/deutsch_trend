@@ -2,9 +2,10 @@ block vars
   - var title;
   - var titleClass;
   - var lazyLad;
+  - var aos;
 .gray-bg.courses-section(data-aos="fade-up")
   .container
-    h2.title.title--h2(class=titleClass)
+    h2.title.title--h2(class=titleClass data-aos=aos)
       .title__wrap=title 
     .courses-section__wrap
       each course in [1,2,3,1,2,3]

@@ -32,7 +32,7 @@ block main
               .typical-block__col
                 .about__video
                   a(href="https://www.youtube.com/watch?v=9xOLt3MNFww" data-fancybox="").about__video-preview
-                    svg(width='80' height='55' viewBox='0 0 80 55' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    svg( viewBox='0 0 80 55' fill='none' xmlns='http://www.w3.org/2000/svg')
                       rect(width='80' height='55' rx='15' fill='#DD0000')
                       path(d='M34.166 37.7083V17.2916L50.2077 27.5L34.166 37.7083Z' fill='white')
                     img(loading="lazy"  src="https://i.ytimg.com/vi/9xOLt3MNFww/maxresdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLDebxL0GTkxzxoRvwjmfVJ_tUFZXw", alt="")
@@ -122,40 +122,53 @@ block main
             
             a.btn.btn--primary(href="#") перейти на youtube канал   
 
-          .blog__flex-wrap 
-            .blog__item.shadow
-              a(href="https://www.youtube.com/watch?v=B-Vn4Ci6NVA&pp=ygUNZGV1dHNjaCB0cmVuZA%3D%3D" data-fancybox).blog__item-preview
-                svg(width='80' height='55' viewBox='0 0 80 55' fill='none' xmlns='http://www.w3.org/2000/svg')
-                  rect(width='80' height='55' rx='15' fill='#DD0000')
-                  path(d='M34.166 37.7083V17.2916L50.2077 27.5L34.166 37.7083Z' fill='white')
+          .blog__flex-wrap.swiper.blog-slider
 
-                img(loading="lazy"  src="https://i.ytimg.com/vi/B-Vn4Ci6NVA/maxresdefault.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLATr3bp9QbT_q9tti153ADi1ZeahQ", alt="")
-              .blog__item-bottom
-                .text 
-                  p Про стосунки в Німеччині
+            .swiper-wrapper
+              .swiper-slide.blog__item.shadow
+                a(href="https://www.youtube.com/watch?v=B-Vn4Ci6NVA&pp=ygUNZGV1dHNjaCB0cmVuZA%3D%3D" data-fancybox).blog__item-preview
+                  svg( viewBox='0 0 80 55' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    rect(width='80' height='55' rx='15' fill='#DD0000')
+                    path(d='M34.166 37.7083V17.2916L50.2077 27.5L34.166 37.7083Z' fill='white')
 
-            .blog__item.shadow
-              a(href="https://www.youtube.com/watch?v=Qybx5DDOVYk" data-fancybox).blog__item-preview
-                svg(width='80' height='55' viewBox='0 0 80 55' fill='none' xmlns='http://www.w3.org/2000/svg')
-                  rect(width='80' height='55' rx='15' fill='#DD0000')
-                  path(d='M34.166 37.7083V17.2916L50.2077 27.5L34.166 37.7083Z' fill='white')
+                  img(loading="lazy"  src="https://i.ytimg.com/vi/B-Vn4Ci6NVA/maxresdefault.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLATr3bp9QbT_q9tti153ADi1ZeahQ", alt="")
+                .blog__item-bottom
+                  .text 
+                    p Про стосунки в Німеччині
 
-                img(loading="lazy"  src="https://i.ytimg.com/vi/Qybx5DDOVYk/maxresdefault.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDhxZkAnjqG5teCITrJy2T6y4dbWQ", alt="")
-              .blog__item-bottom
-                .text 
-                  p Великдень в Німеччині
+              .swiper-slide.blog__item.shadow
+                a(href="https://www.youtube.com/watch?v=Qybx5DDOVYk" data-fancybox).blog__item-preview
+                  svg( viewBox='0 0 80 55' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    rect(width='80' height='55' rx='15' fill='#DD0000')
+                    path(d='M34.166 37.7083V17.2916L50.2077 27.5L34.166 37.7083Z' fill='white')
+
+                  img(loading="lazy"  src="https://i.ytimg.com/vi/Qybx5DDOVYk/maxresdefault.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDhxZkAnjqG5teCITrJy2T6y4dbWQ", alt="")
+                .blog__item-bottom
+                  .text 
+                    p Великдень в Німеччині
 
 
-            .blog__item.shadow
-              a(href="https://www.youtube.com/watch?v=6jp-3PfcXWU" data-fancybox).blog__item-preview
-                svg(width='80' height='55' viewBox='0 0 80 55' fill='none' xmlns='http://www.w3.org/2000/svg')
-                  rect(width='80' height='55' rx='15' fill='#DD0000')
-                  path(d='M34.166 37.7083V17.2916L50.2077 27.5L34.166 37.7083Z' fill='white')
+              .swiper-slide.blog__item.shadow
+                a(href="https://www.youtube.com/watch?v=6jp-3PfcXWU" data-fancybox).blog__item-preview
+                  svg( viewBox='0 0 80 55' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    rect(width='80' height='55' rx='15' fill='#DD0000')
+                    path(d='M34.166 37.7083V17.2916L50.2077 27.5L34.166 37.7083Z' fill='white')
 
-                img(loading="lazy"  src="https://i.ytimg.com/vi/6jp-3PfcXWU/maxresdefault.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB5N3AA_sp4sb7v9UAt9eunJ7mmTQ", alt="")
-              .blog__item-bottom
-                .text 
-                  p Що і як читати німецькою на рівнях А 1 - С1
+                  img(loading="lazy"  src="https://i.ytimg.com/vi/6jp-3PfcXWU/maxresdefault.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB5N3AA_sp4sb7v9UAt9eunJ7mmTQ", alt="")
+                .blog__item-bottom
+                  .text 
+                    p Що і як читати німецькою на рівнях А 1 - С1
+
+              .swiper-slide.blog__item.shadow
+                a(href="https://www.youtube.com/watch?v=6jp-3PfcXWU" data-fancybox).blog__item-preview
+                  svg( viewBox='0 0 80 55' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    rect(width='80' height='55' rx='15' fill='#DD0000')
+                    path(d='M34.166 37.7083V17.2916L50.2077 27.5L34.166 37.7083Z' fill='white')
+
+                  img(loading="lazy"  src="https://i.ytimg.com/vi/6jp-3PfcXWU/maxresdefault.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB5N3AA_sp4sb7v9UAt9eunJ7mmTQ", alt="")
+                .blog__item-bottom
+                  .text 
+                    p Що і як читати німецькою на рівнях А 1 - С1
 
 
 

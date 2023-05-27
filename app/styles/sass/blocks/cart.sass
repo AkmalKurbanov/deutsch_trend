@@ -1,13 +1,19 @@
 .cart
   .table__course
-    width: rem(450)
+    img
+      @include lg
+        display: none
+  //   width: rem(450)
 
-  .table__price
-    width: rem(145)
+  // .table__price
+  //   width: rem(145)
 
   &__flex-wrap
     @include jfcsb
     margin-bottom: rem(30)
+
+    @include md
+      flex-direction: column
 
 
   &__flex-col
@@ -15,9 +21,21 @@
 
     &:first-child
       max-width: rem(810)
+      margin-right: rem(40)
+
+      @include lg
+        margin-right: rem(20)
+
+      @include md
+        margin-bottom: rem(30)  
+        max-width: 100%
 
     &:last-child
       max-width: rem(390)
+
+      @include md  
+        max-width: 100%
+
 
   
 

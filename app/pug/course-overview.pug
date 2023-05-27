@@ -63,6 +63,13 @@ block main
                   .completed__count 1/12 уроків
   
                 .course-overview__list-lessons
+                  .trigger-drop-wrap
+                    span список уроків
+
+                    .trigger-arrow
+                      svg(viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(d='M4.97468 7.05806C5.21876 6.81398 5.61449 6.81398 5.85857 7.05806L10.4166 11.6161L14.9747 7.05806C15.2188 6.81398 15.6145 6.81398 15.8586 7.05806C16.1026 7.30214 16.1026 7.69786 15.8586 7.94194L10.8586 12.9419C10.6145 13.186 10.2188 13.186 9.97468 12.9419L4.97468 7.94194C4.73061 7.69786 4.73061 7.30214 4.97468 7.05806Z' fill='#BABABA')
+
                   .course-overview__lesson
                     .course-overview__lesson-item.active
                       .course-overview__lesson-name Урок 1: Змiшане відмінювання прикметників
@@ -111,8 +118,16 @@ block main
 
             .course-overview__flex-col
               .typical-block
-                h3.title.title--h3.title--colored-small.title--colored-small-secondary(data-aos="zoom-in") 
+
+                h3.title.title--h3.title--colored-small.title--colored-small-secondary.lesson-name(data-aos="zoom-in") 
                   .title__wrap Урок 1: Змiшане відмінювання прикметників
+                
+                .trigger-drop-wrap
+                    span матеріалі уроков
+                    
+                    .trigger-arrow
+                      svg(viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(d='M4.97468 7.05806C5.21876 6.81398 5.61449 6.81398 5.85857 7.05806L10.4166 11.6161L14.9747 7.05806C15.2188 6.81398 15.6145 6.81398 15.8586 7.05806C16.1026 7.30214 16.1026 7.69786 15.8586 7.94194L10.8586 12.9419C10.6145 13.186 10.2188 13.186 9.97468 12.9419L4.97468 7.94194C4.73061 7.69786 4.73061 7.30214 4.97468 7.05806Z' fill='#BABABA')
 
                 .course-overview__lesson-materials
                   .course-overview__materials-col
@@ -153,7 +168,8 @@ block main
                         audio.js-player(controls='')
                           source(src='http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3' type='audio/mp3')
                           source(src='http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg' type='audio/ogg')
-              
+              br
+              br
               .typical-block
                 h3.title.title--h3.title--colored-small.title--colored-small-primary(data-aos="zoom-in") 
                   .title__wrap Відео матеріал
@@ -164,6 +180,7 @@ block main
                     source(src='http://techslides.com/demos/sample-videos/small.webm' type='video/webm')
                     // Captions are optional
                     track(kind='captions' label='English captions' src='/path/to/captions.vtt' srclang='en' default='')
+                  
 
                   
     include includes/footer

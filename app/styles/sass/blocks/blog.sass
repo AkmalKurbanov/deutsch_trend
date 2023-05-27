@@ -4,18 +4,37 @@
 
   &__flex-wrap
     @include fww
+    padding: 0 rem(10) rem(15) rem(10)
+
+    
+
   
   &__wrap
     @include aife-jfcsb
     margin-bottom: rem(40)
 
+    @include sm
+      flex-direction: column
+      align-items: flex-start
+      margin-bottom: rem(25)
+
+    .text
+      @include sm 
+        margin-bottom: rem(20)
+
   &__item
-    width: calc( 33.33% - 15px )
     background: $white
-    margin-bottom: rem(40)
-    margin-right: rem(22.5)  
     border-radius: rem(16)
     overflow: hidden
+
+    @include lg
+      border-radius: rem(14)
+    @include md
+      border-radius: rem(12)
+    @include sm
+      border-radius: rem(10)
+    @include xs
+      border-radius: rem(8)
 
     &:nth-child(3n)
       margin-right: 0
@@ -26,16 +45,48 @@
       position: relative
       min-height: rem(200)
       
+      @include lg
+        min-height: rem(165)
+      
+      @include sm
+        min-height: auto
+      
       svg
         opacity: 0.8
         position: absolute
         top: 50%
         left: 50%
         transform: translate(-50%,-50%)
+        width: rem(65)
+
+        @include sm
+          width: rem(20)
+          top: rem(10)
+          right: rem(10)
+          transform: none
+          left: auto
+
       &:hover
         svg
           opacity: 1
 
     &-bottom
-      padding: rem(15) rem(20)      
+      padding: rem(15) rem(20)   
+      min-height: rem(75)   
+
+      @include lg
+        padding: rem(13) rem(15)   
+      @include md
+        padding: rem(11) rem(13)   
+        min-height: rem(65)   
+      @include sm
+        padding: rem(10)   
+        display: none
+
+      .text
+        @include lg
+          font-size: rem(15)
+
+        @include md    
+          font-size: rem(14)
 

@@ -4,6 +4,10 @@
   &__flex-wrap
     @include fww-jfcsb
 
+    @include sm
+      flex-direction: column
+
+
   &__item
     overflow: hidden
     border-radius: rem(16)
@@ -14,10 +18,29 @@
     flex-direction: column
     justify-content: space-between
 
+    @include lg
+      width: calc( 50% - 10px )
+      border-radius: rem(14)
+
+    @include md
+      border-radius: rem(12)
+    @include sm
+      border-radius: rem(10)
+      width: 100%
+
+    @include xs
+      border-radius: rem(8)
+
     &-wrap
       padding: rem(40)
       position: relative
       min-height: rem(325)
+
+      @include lg
+        padding: rem(20)
+
+      @include md
+        padding: rem(15)
 
       .solid-radial
         background: $primary
@@ -27,6 +50,15 @@
       position: relative
       @include aifs-jfcsb
 
+      @include md
+        flex-direction: column-reverse
+       
+      @include sm
+        flex-direction: row
+
+      @media (max-width: 460px)
+        flex-direction: column-reverse  
+      
       &:after
         position: absolute
         content: ''
@@ -41,15 +73,35 @@
 
       .title
         margin-bottom: 0!important
+        min-height: auto
 
+        @include lg
+          font-size: rem(20)
       span
         display: block
         text-transform: uppercase
         font-size: rem(20)
 
+        @include lg
+          font-size: rem(16)
+
+      .solid-radial
+        margin-left: rem(10)
+
+        @include md
+          margin-bottom: rem(10)
+
+        @media (max-width: 460px)
+          margin-left: 0  
+          margin-bottom: rem(15)
+
     &-middle
       margin-top: rem(50)
       min-height: rem(125)
+
+      @include lg
+        margin-top: rem(20)
+
       s
         color: #BABABA
         font-size: rem(14)
@@ -58,15 +110,28 @@
       ul
         margin: 0
         padding: 0
+        
+        @include lg
+          margin-bottom: rem(10)
 
         li
           font-size: rem(18)
           font-weight: 600
           list-style: none
 
+          @include lg
+            font-size: rem(15)
+
+      .title--h3
+        font-size: rem(16)
+        min-height: auto
+
       &-wrap
         @include jfcsb
         min-height: rem(60)
+
+        @include lg
+          flex-direction: column
 
       &-col
         @include aic
@@ -95,10 +160,26 @@
       width: 100%
       @include aic-jcc
 
+      @include lg
+        display: none
+
     &-bottom
       @include aic-jfcsb
       padding: rem(40) rem(30)
       background: $primary
+
+      @include lg
+        padding: rem(30)
+
+      @include md
+        padding: rem(20) rem(15)
+        flex-direction: column-reverse
+
+      @include sm
+        flex-direction: row  
+
+      @media (max-width: 460px)  
+        flex-direction: column-reverse
 
       .solid-radial
         &:hover
@@ -109,12 +190,30 @@
       line-height: rem(48)
       font-weight: 700
 
+      @include lg
+        font-size: rem(20)
+        line-height: rem(28)
+
+      @include md  
+        margin-bottom: rem(10)
+
+      @include sm
+        margin-bottom: 0
+
+      @media (max-width: 460px)
+        margin-bottom: rem(10)
+
+
       span
         opacity: 0.3
         font-size: rem(30)
         line-height: rem(36)
         display: inline-block
         margin-right: rem(20)
+        
+        @include lg
+          font-size: rem(16)
+          line-height: rem(22)
 
     &:nth-child(2n)
       .courses-packages__item-top
@@ -128,6 +227,7 @@
             background: $primary
 
 .course-package-detail
+  margin-top: rem(30)
   .typical-block--horizontal
     @include aistr
 
@@ -138,6 +238,16 @@
       li
         line-height: rem(24)
         font-size: rem(20)
+
+        @include lg
+          font-size: rem(19)
+          line-height: normal
+        @include md
+          font-size: rem(18)
+        @include sm
+          font-size: rem(17)
+        @include xs
+          font-size: rem(16)
 
     .text
       p
@@ -150,6 +260,10 @@
 
   &__price-block
     @include aic-jfcsb
+    margin-top: rem(15)
+    
+    @include xs
+      flex-direction: column
 
     .solid-radial
       font-size: rem(16)
@@ -157,16 +271,29 @@
   &__price
     font-size: rem(28)
     font-weight: 600
+    @include lg
+      font-size: rem(20)
+
+    @include xs
+      margin-bottom: rem(10)  
 
     span
       font-size: rem(22)
       opacity: 0.3
       margin-right: rem(20)
+      
+      @include lg
+        font-size: rem(16)
+        margin-right: rem(10)
+
 
   &__flex-wrap
     margin-top: rem(40)
     @include jfcsb
     align-items: flex-start
+
+    @include md
+      flex-direction: column
 
   &__flex-col
     width: 100%
@@ -176,12 +303,23 @@
 
     &:first-child
       max-width: rem(580)
+      margin-right: rem(40)
+
+      @include lg
+        margin-right: rem(15)
+      
+      @include md
+        max-width: 100%
+        margin-right: 0
       
       .typical-block
         box-shadow: 0px 8px 16px rgba(254, 16, 130, 0.25)
 
     &:last-child
       max-width: rem(620)
+      
+      @include md
+        max-width: 100%
 
     .typical-block
       margin-bottom: rem(30)  
