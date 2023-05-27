@@ -1,0 +1,84 @@
+.profile
+
+  &__flex-wrap
+    @include fww-jfcsb
+    width: 100%
+    max-width: rem(1160)
+    margin: auto
+
+
+  &__flex-item
+    margin-bottom: rem(30)
+    width: 100%
+
+    &:last-child
+      margin-bottom: 0
+      
+
+  &__primary-text
+    @include aic-jcc
+    font-size: rem(14)
+    font-weight: 600
+    text-align: center
+    
+    svg
+      margin-right: rem(10)
+  
+  &__img-block
+    max-width: rem(365)
+
+    .title
+      display: flex
+
+  &__img-wrap 
+    position: relative
+    margin: rem(30) auto
+    width: rem(125)
+    height: rem(125)
+
+  &__img
+    width: rem(125)
+    height: rem(125)
+    border-radius: 100%
+    overflow: hidden
+    @include aic-jcc
+
+    &-edit
+      width: rem(40)
+      height: rem(40)
+      border-radius: rem(10)
+      box-shadow: 0px 4px 8px rgba(152, 156, 166, 0.15)
+      background: $primary
+      @include aic-jcc
+      position: absolute
+      bottom: 0
+      right: 0
+      cursor: pointer
+      transition: $transition
+
+      &:hover
+        background: $secondary
+
+
+  &__log-pass
+    max-width: rem(765)
+
+    &-wrap
+      margin-top: rem(15)
+      columns: 2
+      column-gap: rem(40)
+
+  &__profile
+
+    &-top
+      @include aic-jfcsb
+      margin-bottom: rem(25)
+
+      .title
+        margin-bottom: 0!important
+    &-wrap
+      columns: 3
+      column-gap: rem(55)
+      margin-top: rem(15)
+
+  

@@ -1,24 +1,60 @@
 extends layouts/main
 
-block vars
-  - var description = '';
-  - var keywords= '';
-  - var ogtitle = '';
-  - var ogtype = '';
-  - var ogurl = '';
-  - var ogimg = '';
-
+block variables
+  - var description;
+  - var keywords;
+  - var ogtitle;
+  - var ogtype;
+  - var ogurl;
+  - var ogimg;
+  
+  
 block title
-  | main
+  | Головна | DEUTSCH TREND
 block main
   .wrapper
     .content
-        include includes/header
+      
+      include includes/header
+      
+      include includes/hero
 
+      block vars
+        - var titleClass = "title--ttu";
+        - var title = "Для новачків";
+      include includes/courses-section
+
+      block vars
+        - var title = "Рівень А1";
+        - var lazyLad = 'img(loading="lazy" ';
+      include includes/courses-section
+      
+      block vars
+        - var title = "Рівень A2";
+      include includes/courses-section
+
+      block vars
+        - var title = "Рівень B1";
+      include includes/courses-section
+
+      block vars
+        - var title = "Мини-курси";
+      include includes/courses-section
         
+      
+
+      .btn-only
+        .container 
+          .btn-only__wrap.stroke.stroke--primary(data-aos="zoom-in")
+            a(href="#") переглянути всі курси
+
+
+      
+      include includes/instagram-feed
          
      
 
+    
     include includes/footer
 
 

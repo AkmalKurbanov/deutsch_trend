@@ -1,7 +1,106 @@
 .footer
 	flex: 0 0 auto
+	background: $dark
+	padding: rem(40) 0 rem(30)
+
+	&__nav
+		margin-top: rem(10)
+		@include jfcsb
+
+		@include sm
+			flex-wrap: wrap
+		
+		&-item
+			width: 25%
+			margin-right: rem(10)
+
+			@include sm
+				width: calc( 50% - 5px )
+				margin-right: 0
+
+			@media (max-width: 460px)
+				width: 100%
 
 
+			&:last-child
+				margin-right: 0
+			
+			span
+				color: $white
+				text-transform: uppercase
+				font-size: rem(15)
+				display: block
+				margin-top: rem(30)
+				margin-bottom: rem(15)
+				line-height: rem(18)
+				font-weight: 600
+		
+			ul
+				margin: 0
+				padding: 0
+				
+				li
+					margin-bottom: rem(5)
+					list-style: none
+					a
+						font-size: rem(15)
+						color: $white
+						line-height: rem(19)
+						span
+							margin-top: 0
+							font-size: rem(12)
+							font-weight: 500
+						&:hover
+							color: $primary
+
+
+	&__social
+		@include jfcfe
+		margin-top: rem(15)
+
+		@include sm
+			justify-content: flex-start
+
+		ul	
+			@include sm
+				padding-left: 0
+
+
+	&__bottom
+		@include aic-jfcsb
+		margin-top: rem(30)
+		
+		@include sm
+			flex-direction: column
+			align-items: flex-start
+
+
+		p
+			color: $white
+			font-size: rem(11)
+
+			@include sm
+				margin-bottom: rem(10)
+
+		ul
+			display: flex
+			
+			@include sm
+				padding: 0
+
+
+			li
+				margin-right: rem(35)
+				
+				&:last-child
+					margin-right: 0
+				
+				a
+					color: $white
+					font-size: rem(11)
+
+					&:hover
+						color: $primary
 
 
 	

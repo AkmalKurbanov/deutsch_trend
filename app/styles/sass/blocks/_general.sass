@@ -1,39 +1,1361 @@
 *
-  margin: 0 
+  margin: 0
+  box-sizing: border-box
+  -webkit-tap-highlight-color: transparent
+
+h1
+  margin-top: 0
 
 html,
 body
   height: 100%
-  position: relative      
+  position: relative
 
-.wrapper 
+body
+  &.no-scroll
+    overflow: hidden
+
+.wrapper
   display: flex
   flex-direction: column
   min-height: 100%
+  overflow: hidden
 
-  .content 
+  .content
     flex: 1 0 auto
-  
+    transition: $transition
 
-.container 
-  width: 100% 
-  padding-right: rem(15px) 
-  padding-left: rem(15px) 
-  margin-right: auto 
-  margin-left: auto 
-  max-width: rem(1170px) 
-  position: relative 
+  &.translateX
+    .content
+      transform: translateX(200px)
+      transition-delay: .3s
+
+.container
+  width: 100%
+  padding-right: rem(15px)
+  padding-left: rem(15px)
+  margin-right: auto
+  margin-left: auto
+  max-width: rem(1270px)
+  position: relative
   box-sizing: border-box
 
   @include lg
-    max-width: rem(960px) 
-  
-  @include md 
-      max-width: rem(720px) 
-  
-  @include sm 
-      max-width: rem(540px) 
-  
-  @include xs 
-      max-width: 100% 
+    max-width: rem(960px)
 
+  @include md
+    max-width: rem(720px)
+
+  @include sm
+    max-width: rem(540px)
+
+  @include xs
+    max-width: 100%
+
+// Параметры изображений начало  
+img
+  width: 100%
+  height: auto
+// Параметры изображений конец 
+
+// Параметры ссылок начало  
+a
+  text-decoration: none
+  transition: $transition
+// Параметры ссылок конец     
+
+// Логотип начало
+.logo
+  max-width: rem(128)
+  width: 100%
+  @include aic-jcc
+  transition: $transition
+
+  @include lg
+    max-width: rem(100)
+
+  &--dark
+    svg
+      path
+        fill: $dark
+
+  &--light
+    svg
+      path
+        fill: $white
+
+  svg
+    width: 100%
+
+// Логотип конец
+
+// Кнопка начало
+
+.btn
+  @include dif-aic-jcc
+  font-weight: 800
+  font-family: $userfont2
+  text-decoration: none
+  outline: none
+  border: none
+  color: $dark
+  text-transform: uppercase
+  background: $white
+  cursor: pointer
+  transition: $transition
+  text-align: center
+  padding: rem(8) rem(19)
+  min-height: rem(43)
+  letter-spacing: 0.1em
+  border-radius: rem(10)
+  box-shadow: 0px 4px 8px rgba(254, 16, 130, 0.25)
+
+  @include lg
+    padding: rem(7) rem(17)
+    min-height: rem(41)
+    font-size: rem(15)
+    border-radius: rem(9)
+
+  @include md
+    padding: rem(6) rem(15)
+    min-height: rem(39)
+    font-size: rem(14)
+    border-radius: rem(8)
+
+  @include sm
+    padding: rem(6) rem(13)
+    min-height: rem(37)
+    font-size: rem(13)
+    border-radius: rem(7)
+
+  @include xs
+    padding: rem(6) rem(11)
+    min-height: rem(35)
+    font-size: rem(12)
+    border-radius: rem(6)
+
+  &:hover
+    background: $primary
+    box-shadow: 0px 4px 8px rgba($primary, 0.35)
+
+  .icon
+    margin-right: rem(10)
+    @include aic-jcc
+    svg
+      transition: $transition
+
+      path
+        transition: $transition
+
+  &--primary
+    border: rem(2) solid $primary
+    box-shadow: 0px 4px 8px rgba($primary, 0.35)
+
+    &:hover
+      border-color: #c0ff72
+      background: #c0ff72
+      box-shadow: 0px 4px 8px rgba($secondary, 0.35)
+
+      .icon
+        svg
+          path
+            fill: $primary
+
+  &--secondary
+    background: #c0ff72
+    box-shadow: 0px 4px 8px rgba($secondary, 0.35)
+
+    &:hover
+      background: $primary
+      box-shadow: 0px 4px 8px rgba($primary, 0.35)
+
+.btn-only
+  padding: rem(60) 0
+  margin-bottom: rem(80)
+  text-align: center
+
+  @include lg
+    padding: rem(55) 0
+    margin-bottom: rem(50)
+
+  @include md
+    padding: rem(50) 0
+    margin-bottom: rem(45)
+
+  @include sm
+    padding: rem(45) 0
+    margin-bottom: rem(40)
+
+  @include xs
+    padding: rem(40) 0
+    margin-bottom: rem(35)
+
+  span
+    width: 100%!important
+
+    @include xs
+      width: rem(400)!important
+
+    svg
+      width: 100%!important
+      @include xs
+        width: auto
+
+  &__wrap
+    @include aic-jcc
+    position: relative
+
+    a
+      background: $white
+      @include dif-aic-jcc
+      max-width: rem(650)
+      width: 100%
+      font-size: rem(30)
+      font-weight: 700
+      position: relative
+      z-index: 3
+      box-shadow: 0px 4px 8px rgba(254, 16, 130, 0.15)
+      border-radius: rem(10)
+      min-height: rem(80)
+      color: $dark
+
+      @include lg
+        font-size: rem(27)
+        max-width: rem(500)
+        min-height: rem(70)
+        border-radius: rem(9)
+
+      @include md
+        font-size: rem(25)
+        max-width: rem(400)
+        min-height: rem(60)
+        border-radius: rem(8)
+
+      @include sm
+        font-size: rem(23)
+        max-width: rem(300)
+        min-height: rem(50)
+        border-radius: rem(7)
+
+      @include xs
+        font-size: rem(20)
+        border-radius: rem(6)
+
+      &:hover
+        color: $secondarylight
+
+// Кнопка конец
+
+// Заголовок начало
+
+.title
+  font-family: $userfont2
+  font-weight: 800
+  display: inline-flex
+  align-items: center
+  margin-bottom: rem(20)
+
+  &__wrap
+    position: relative
+    z-index: 3
+
+  // Заголовок первого уровня начало
+
+  &--h1
+    font-size: rem(60)
+    letter-spacing: 0.05em
+
+    @include lg
+      font-size: rem(50)
+
+    @include md
+      font-size: rem(40)
+
+    @include sm
+      font-size: rem(35)
+
+    @include xs
+      font-size: rem(30)
+
+    .stroke1,
+    .stroke2
+      width: rem(930)
+      height: rem(200)
+
+      @include lg
+        width: rem(700)
+        height: rem(150)
+
+      @include md
+        width: rem(500)
+        height: rem(100)
+
+      @include sm
+        width: rem(400)
+        height: rem(100)
+
+  &--h2
+    font-size: rem(30)
+    line-height: rem(38)
+    text-shadow: 0px 4px 8px rgba(248, 165, 213, 0.25)
+    letter-spacing: 0.1em
+    min-height: rem(65)
+
+    @include lg
+      font-size: rem(27)
+      line-height: rem(35)
+      min-height: rem(55)
+
+    @include md
+      font-size: rem(24)
+      line-height: rem(32)
+      min-height: rem(50)
+
+    @include sm
+      font-size: rem(21)
+      line-height: rem(29)
+      min-height: rem(45)
+
+    @include xs
+      font-size: rem(18)
+      line-height: rem(27)
+      min-height: rem(40)
+
+    .stroke1,
+    .stroke2
+      width: rem(520)
+
+      @include lg
+        width: rem(500)
+      @include md
+        width: rem(450)
+      @include sm
+        width: rem(400)
+      @include xs
+        width: rem(350)
+
+    .title__wrap
+      padding-left: rem(25)
+
+      @include lg
+        padding-left: rem(23)
+      @include md
+        padding-left: rem(21)
+      @include sm
+        padding-left: rem(18)
+      @include xs
+        padding-left: rem(16)
+
+  &--h3
+    font-size: rem(20)
+    font-weight: 700
+    min-height: rem(32)
+
+    .stroke1,
+    .stroke2
+      width: rem(275)
+
+    .title__wrap
+      padding-left: rem(20)
+
+      @include lg
+        padding-left: rem(18)
+      @include md
+        padding-left: rem(16)
+      @include sm
+        padding-left: rem(14)
+      @include xs
+        padding-left: rem(12)
+
+  &--ttu
+    text-transform: uppercase
+
+  &--gray-bg
+    span
+      &.stroke1,
+      &.stroke2
+        &:before
+          background: #F8F8F8
+
+  &--colored-big
+    span
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+
+  &--colored-big-primary
+    svg
+      path
+        fill: $primary
+
+  &--colored-small
+    span
+      top: 50%
+      transform: translateY(-50%)
+
+  &--colored-small-secondary
+    svg
+      path
+        fill: $secondary
+
+  &--colored-big,
+  &--colored-small
+    position: relative
+
+    span
+      position: absolute
+      overflow: hidden
+      @include aic
+
+      svg
+        width: 100%
+        height: 100%
+
+      &:before
+        position: absolute
+        content: ''
+        width: 100%
+        height: 100%
+        background: $white
+        transition: .1s
+        transition-delay: .4s
+
+      &.stroke1
+        z-index: 2
+      &.stroke2
+        z-index: 1
+
+        &:before
+          transition-delay: .7s
+
+    &.active,
+    &.aos-animate
+      .stroke1
+        &:before
+          transform: translateX(100%)
+
+      .stroke2
+        &:before
+          transform: translateX(-100%)
+
+  &--colored-primary
+    margin-bottom: rem(15)
+
+    span
+      left: 0
+      transform: translate(-20px,-50%)
+      height: auto
+
+// Заголовок первого уровня конец
+
+// Подзаголовок начало
+.subtitle
+  font-weight: 400
+  font-size: rem(30)
+  line-height: rem(36)
+  z-index: 3
+  position: relative
+
+  @include lg
+    font-size: rem(27)
+    line-height: rem(33)
+
+  @include md
+    font-size: rem(25)
+    line-height: rem(30)
+
+  @include sm
+    font-size: rem(22)
+    line-height: rem(25)
+// Подзаголовок конец
+
+// Заголовок конец  
+
+// Контент текст начало  
+.text
+  font-size: rem(20)
+  line-height: rem(24)
+  z-index: 3
+  position: relative
+
+  @include lg
+    font-size: rem(19)
+    line-height: rem(23)
+
+  @include md
+    font-size: rem(18)
+    line-height: rem(22)
+
+  @include sm
+    font-size: rem(16)
+    line-height: rem(21)
+
+  @include xs
+    font-size: rem(15)
+    line-height: rem(20)
+
+// Контент текст конец  
+
+// Секция серого цвета начало  
+.gray-bg
+  padding: rem(50) 0
+  margin-bottom: rem(60)
+  background: #F8F8F8
+
+  @include lg
+    padding: rem(45) 0
+    margin-bottom: rem(55)
+  @include md
+    padding: rem(40) 0
+    margin-bottom: rem(45)
+  @include sm
+    padding: rem(35) 0
+    margin-bottom: rem(35)
+  @include xs
+    padding: rem(30) 0
+    margin-bottom: rem(30)
+
+  &:last-child
+    margin-bottom: 0
+
+// Секция серого цвета конец   
+
+// Тени блоков начало  
+.shadow
+  box-shadow: 0px 4px 8px rgba(152, 156, 166, 0.15)
+// Тени блоков конец  
+
+// Радиус блоков начало  
+.border-radius
+  border-radius: rem(16)
+  overflow: hidden
+
+  @include lg
+    border-radius: rem(14)
+
+  @include md
+    border-radius: rem(12)
+
+  @include sm
+    border-radius: rem(10)
+
+  @include xs
+    border-radius: rem(8)
+// Радиус блоков конец   
+
+// Эффект мазка кисти начало  
+.stroke-primary,
+.stroke
+  position: relative
+
+  &__wrap
+    position: relative
+    z-index: 1
+
+  span
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    display: block
+    width: rem(930)
+    height: rem(200)
+    overflow: hidden
+
+    svg
+      width: 100%
+      height: 100%
+
+    &:before
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      background: $white
+      transition: .1s
+      transition-delay: .4s
+
+    &.stroke1
+      z-index: 2
+    &.stroke2
+      z-index: 1
+
+      &:before
+        transition-delay: .7s
+
+  &--primary
+    svg
+      path
+        fill: $primary
+
+  &--secondary
+    svg
+      path
+        fill: $secondary
+
+  &.active,
+  &.aos-animate
+    .stroke1
+      &:before
+        transform: translateX(100%)
+
+    .stroke2
+      &:before
+        transform: translateX(-100%)
+
+// Эффект мазка кисти конец  
+
+// Социальные сети начало  
+.social
+  ul
+    display: flex
+    li
+      margin-right: rem(20)
+      list-style: none
+
+      &:last-child
+        margin-right: 0
+
+      a
+        @include aic-jcc
+        width: rem(35)
+        height: rem(35)
+        border-radius: 100%
+        background: $white
+
+        
+
+        svg
+          path
+            transition: $transition
+
+        &:hover
+          background: $primary
+          svg
+            path
+              fill: $white
+// Социальные сети конец  
+
+// Хлебные крошки начало  
+.bread-crumbs
+  @include aic-jfcsb
+  margin-bottom: rem(50)
+
+  @include lg
+    margin-bottom: rem(40)
+
+  @include md
+    flex-direction: column
+    align-items: flex-start
+
+  @include sm
+    margin-bottom: rem(35)
+
+  @include xs
+    margin-bottom: rem(30)
+
+  ul
+    margin: 0
+    padding: 0
+
+    @include md
+      margin-bottom: rem(20)
+
+    li
+      color: #BABABA
+      display: inline-block
+      margin-right: rem(5)
+      padding-right: rem(15)
+      position: relative
+      font-size: rem(20)
+      @include lg
+        font-size: rem(15)
+      @include md
+        font-size: rem(14)
+      @include sm
+        font-size: rem(13)
+      @include xs
+        font-size: rem(12)
+
+      &:after
+        position: absolute
+        content: '/'
+        right: 0
+
+      &:last-child
+        margin-right: 0
+        padding-right: 0
+
+        &:after
+          display: none
+
+        &:hover
+          cursor: no-drop
+
+      a
+        color: #BABABA
+
+        &:hover
+          color: $secondary
+// Хлебные крошки конец  
+
+// Типичный блок начало
+.typical-block
+  border-radius: rem(16)
+  box-shadow: 0px 8px 16px rgba(152, 156, 166, 0.15)
+  overflow: hidden
+  padding: rem(35) rem(30)
+  background: $white
+
+  @include lg
+    border-radius: rem(14)
+    padding: rem(30) rem(25)
+  @include md
+    border-radius: rem(12)
+    padding: rem(25) rem(20)
+  @include sm
+    border-radius: rem(10)
+    padding: rem(20) rem(15)
+  @include xs
+    border-radius: rem(8)
+    padding: rem(15)
+
+  &__col
+    width: calc( 50% - 25px )
+
+    @include lg
+      width: calc( 50% - 10px )
+
+    @include md
+      width: 100%
+
+    &:first-child
+      @include md
+        margin-bottom: rem(20)  
+
+  &__img
+    border-radius: rem(20)
+    overflow: hidden
+    @include aic-jcc
+
+    @include lg
+      border-radius: rem(14)
+    @include md
+      border-radius: rem(12)
+    @include sm
+      border-radius: rem(10)
+    @include xs
+      border-radius: rem(8)
+
+
+  &--horizontal
+    @include aic-jfcsb
+
+    @include md
+      flex-direction: column
+
+  .btn
+    display: flex
+    margin-bottom: rem(30)
+
+    @include lg
+      margin-bottom: rem(28)
+    @include md
+      margin-bottom: rem(26)
+    @include sm
+      margin-bottom: rem(24)
+    @include xs
+      margin-bottom: rem(22)
+
+    &:last-child
+      margin-bottom: 0
+
+  .text
+    margin-bottom: rem(30)
+
+    @include lg
+      margin-bottom: rem(27)
+    @include md
+      margin-bottom: rem(24)
+    @include sm
+      margin-bottom: rem(21)
+    @include xs
+      margin-bottom: rem(18)
+
+    &:last-child
+      margin-bottom: 0
+
+  p,li
+    font-weight: 500
+
+    @include xs
+      font-size: rem(14)
+
+  ul,ol
+    padding-left: rem(20)
+    margin-bottom: rem(35)
+    
+    @include lg
+      margin-bottom: rem(30)
+    @include md
+      margin-bottom: rem(25)
+    @include sm
+      margin-bottom: rem(20)
+    @include xs
+      margin-bottom: rem(15)
+
+    li
+      line-height: rem(20)
+
+    &:last-child
+      margin-bottom: 0
+
+    &.column
+      columns: 2
+      @include xs
+        columns: 1
+
+  &__bottom
+    padding: rem(20) rem(30)
+    @include aic-jfcsb
+    background: $primary
+    
+    @include lg
+      padding: rem(18) rem(20)
+    @include md
+      padding: rem(16) rem(15)
+    @include sm
+      padding: rem(14) rem(10)
+    
+    @media (max-width: 460px)
+      flex-direction: column
+
+    button.solid-radial,
+    a.solid-radial
+      &:hover
+        background: $secondary
+
+  // Итог заказа начало
+  &__total
+
+    p
+      font-weight: 500
+      line-height: rem(19)
+      color: rgba($dark,.6)
+      margin: rem(20) 0
+
+      &:last-child
+        margin-bottom: 0
+
+    .input
+      margin-bottom: rem(30)
+
+    .btn
+      margin-bottom: rem(20)
+
+      &:last-child
+        margin-bottom: 0
+
+    &-item
+      padding: rem(20) 0
+      border-bottom: rem(2) solid #E7E7E7
+
+      &:last-child
+        border: none
+        padding-bottom: 0
+
+      .typical-block__sum,
+      .typical-block__total-sum
+        &:last-child
+          margin-bottom: 0
+
+  &__title
+    font-size: rem(20)
+    text-transform: uppercase
+    font-weight: 500
+    padding-bottom: rem(10)
+    border-bottom: rem(2) solid #E7E7E7
+    margin-bottom: rem(20)
+
+  &__sum
+    @include jfcsb
+    font-size: rem(20)
+    font-weight: 500
+    margin-bottom: rem(10)
+
+    span
+      &:last-child
+        color: rgba($dark, .6)
+
+  &__total-sum
+    @include jfcsb
+    color: $secondarylight
+    text-transform: uppercase
+    font-size: rem(24)
+    font-weight: 600
+    margin-bottom: rem(20)
+  // Итог заказа конец
+// Типичный блок конец
+
+// Позиционирование начало  
+.tal
+  text-align: left
+.tac
+  text-align: center
+.tar
+  text-align: right
+// Позиционирование конец    
+
+// Регистр текста начало  
+.ttu
+  text-transform: uppercase
+  letter-spacing: 0.1em
+// Регистр текста конец
+
+// Радиальный залитый элемент начало  
+
+.solid-radial
+  @include dif-aic-jcc
+  text-transform: uppercase
+  text-align: center
+  letter-spacing: 0.1em
+  font-weight: 800
+  font-family: $userfont2
+  font-size: rem(20)
+  padding: rem(7) rem(25)
+  color: $dark
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
+  border-radius: rem(30)
+
+  @include lg
+    border-radius: rem(27)
+    font-size: rem(15)
+  @include md
+    border-radius: rem(24)
+    font-size: rem(14)
+  @include sm
+    border-radius: rem(21)
+  @include xs
+    border-radius: rem(18)
+
+  &--btn
+    font-size: rem(16)
+    padding: rem(8) rem(25)
+
+    @include lg
+      font-size: rem(15)
+    @include md
+      font-size: rem(14)
+    @include sm
+      font-size: rem(13)
+    @include xs
+      font-size: rem(12)
+
+    &.solid-radial--pc
+      &:hover
+        background: $secondary
+
+    &.solid-radial--gc
+      &:hover
+        background: $primary
+
+  &--pc
+    background: $primary
+
+  &--gc
+    background: $secondary
+
+  &--wc
+    background: $white
+// Радиальный залитый элемент конец 
+
+// Список уроков начало   
+.list
+  .btn
+    margin-bottom: 0
+
+  .hide
+    display: none
+
+  &__hidden
+    display: none
+
+  ol
+    margin: 0
+    padding: 0
+
+    li
+      margin-top: rem(30)
+      list-style: none
+
+      @include lg
+        margin-top: rem(25)
+      @include md
+        margin-top: rem(22)
+      @include sm
+        margin-top: rem(18)
+      @include xs
+        margin-top: rem(15)
+          
+
+      a
+        @include aic
+        text-transform: uppercase
+        color: $dark
+        background: $white
+        box-shadow: 0px 4px 16px rgba(254, 16, 130, 0.1)
+        border-radius: rem(10)
+        padding: rem(15) rem(30)
+        font-weight: 700
+
+        @include lg
+          font-size: rem(15)
+          padding: rem(11) rem(20)
+          border-radius: rem(8)
+
+        @include md
+          font-size: rem(14)
+          padding: rem(11) rem(15)
+
+        @include sm
+          font-size: rem(13)
+
+        @include sm
+          font-size: rem(12)
+
+        &:hover
+          box-shadow: 0px 4px 16px rgba($secondary, .4)
+          color: $primary
+
+  &--accordion
+    .btn
+      justify-content: flex-start
+
+    .list__accordion-item
+      margin-bottom: rem(30)
+
+      &:last-child
+        margin-bottom: 0
+
+    .list__accordion-item-hide
+      padding: rem(35) 0
+      display: none
+
+      p
+        font-weight: 600
+        margin-bottom: rem(10)
+
+      ul
+        margin-left: rem(20)
+        li
+          font-weight: 500
+          line-height: rem(22)!important
+
+// Список уроков конец    
+
+// Селект выпадающий, инпут начало  
+.select
+  position: relative
+
+  &__selected
+    @include aic-jfcsb
+    cursor: pointer
+    font-weight: 600
+    font-size: rem(14)
+    width: 100%
+
+  &__dropdown
+    position: absolute
+    opacity: 0
+    pointer-events: none
+    top: 100%
+    left: 50%
+    width: calc( 100% + 4px )
+    transition: $transition
+    background: $white
+    transform: translate(-50%,-20px)
+    border: rem(2) solid rgba(152, 156, 166, 0.15)
+    border-top: 0
+    border-radius: 0 0 rem(16) rem(16)
+    overflow: hidden
+    cursor: pointer
+    z-index: 1
+
+    &-option
+      padding: 0 rem(15)
+      transition: $transition
+      font-size: rem(14)
+      font-weight: 500
+
+      &:hover
+        background: rgba($primary, .3)
+
+  &__arrow
+    transition: $transition
+    @include aic-jcc
+
+  &.open
+    border-radius: rem(16) rem(16) 0 0
+
+    .select__dropdown
+      opacity: 1
+      pointer-events: inherit
+      transform: translate(-50%,0)
+
+    .select__arrow
+      transform: rotate(180deg)
+
+.select,
+.input
+  @include aic
+  border: rem(2) solid rgba(152, 156, 166, 0.15)
+  border-radius: rem(10)
+  min-height: rem(44)
+  padding: 0 rem(15)
+  margin-top: rem(5)
+  margin-bottom: rem(20)
+
+  input
+    width: 100%
+    border: none
+    font-size: rem(14)
+    font-weight: 500
+
+    &::placeholder
+      color: #d9d9d9
+
+.input
+  .icon
+    @include aic-jcc
+    cursor: pointer
+
+    &.hide-pass
+      display: none
+      opacity: .4
+
+label
+  font-weight: 700
+
+  .optional
+    color: $primary
+    font-size: rem(12)
+    font-weight: 500
+    font-style: italic
+    position: relative
+    margin-left: rem(7)
+    padding-left: rem(10)
+
+    &:before
+      position: absolute
+      content: ''
+      width: rem(5)
+      height: rem(5)
+      border-radius: 100%
+      background: $primary
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+
+// Селект выпадающий, инпут конец  
+
+// Чекбокс начало
+.checkbox
+  @include aic
+
+  &__wrap
+    @include aic
+
+    span
+      margin-right: rem(10)
+      width: rem(13)
+      height: rem(13)
+      border-radius: rem(2)
+      border: rem(1) solid #F8A5D5
+      @include aic-jcc
+      cursor: pointer
+
+      svg
+        opacity: 0
+        min-width: rem(14)
+
+    input
+      opacity: 0
+      cursor: pointer
+      position: absolute
+      z-index: 1
+
+      &:checked
+        ~span
+          border: none
+          svg
+            opacity: 1
+    label
+      cursor: pointer
+      font-size: rem(14)
+      font-weight: 500
+
+  &.agree
+    @include aic-jfcsb
+
+    a
+      color: $primary
+      font-style: italic
+// Чекбокс конец
+
+// Радио кнопка начало 
+.radio
+  @include aic
+
+  &__wrap
+    @include aic
+
+    span
+      margin-right: rem(10)
+      width: rem(20)
+      height: rem(20)
+      border-radius: 100%
+      border: rem(1) solid $dark
+      @include aic-jcc
+      cursor: pointer
+      position: relative
+
+      &:before
+        position: absolute
+        content: ''
+        width: rem(9)
+        height: rem(9)
+        border-radius: 100%
+        background: $dark
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        opacity: 0
+
+    input
+      opacity: 0
+      cursor: pointer
+      position: absolute
+      z-index: 1
+      width: rem(20)
+      height: rem(20)
+
+      &:checked
+        ~span
+          &:before
+            opacity: 1
+
+    label
+      cursor: pointer
+      font-size: rem(20)
+      font-weight: 500
+
+// Радио кнопка конец
+
+// акцентированный цвет текста начало  
+.primary-color
+  color: $primary
+// акцентированный цвет текста конец  
+
+// Пройдениые уроки начало
+.completed
+
+  &__count
+    color: $primary
+    font-size: rem(14)
+    font-weight: 700
+
+  &__line
+    width: calc( 100% - 5px )
+    height: rem(6)
+    background: #F9F9F9
+    position: relative
+    border-radius: rem(30)
+    margin: rem(20) 0 rem(10)
+
+    &:after
+      position: absolute
+      content: ''
+      width: rem(15)
+      height: rem(15)
+      border-radius: 100%
+      background: #F9F9F9
+      top: 50%
+      right: 0
+      transform: translateY(-50%)
+
+    svg
+      position: absolute
+      bottom: rem(1)
+      right: -8px
+      z-index: 1
+
+  &__percents
+    background: $primary
+    height: 100%
+    border-radius: rem(30)
+    text-align: center
+    @include aic-jcc
+    position: relative
+
+    svg
+      position: absolute
+      right: rem(-7)
+      bottom: calc( 100% + 6px )
+
+    span
+      position: absolute
+      font-size: rem(14)
+      text-shadow: rgb(248, 165, 213) 1px 0px 0px, rgb(248, 165, 213) 0.540302px 0.841471px 0px, rgb(248, 165, 213) -0.416147px 0.909297px 0px, rgb(248, 165, 213) -0.989992px 0.14112px 0px, rgb(248, 165, 213) -0.653644px -0.756802px 0px, rgb(248, 165, 213) 0.283662px -0.958924px 0px, rgb(248, 165, 213) 0.96017px -0.279415px 0px
+      color: $white
+
+// Пройдениые уроки конец
+
+// Гамбургер начало
+.hamburger
+  width: rem(30)
+  height: rem(20)
+  position: relative
+  transform: rotate(0deg)
+  transition: .5s ease-in-out
+  cursor: pointer
+  display: none
+  z-index: 9999
+
+  @include lg
+    display: block
+
+  span
+    display: block
+    position: absolute
+    height: rem(3)
+    width: 100%
+    background: $primary
+    border-radius: rem(2)
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
+    transition: .25s ease-in-out
+
+    &:nth-child(1)
+      top: 0
+
+    &:nth-child(2)
+      top: rem(9)
+
+    &:nth-child(3)
+      top: rem(18)
+
+  &.open
+    span
+      &:nth-child(1)
+        top: rem(10)
+        transform: rotate(135deg)
+
+      &:nth-child(2)
+        opacity: 0
+        left: rem(-60)
+
+      &:nth-child(3)
+        top: rem(10)
+        transform: rotate(-135deg)
+// Гамбургер конец

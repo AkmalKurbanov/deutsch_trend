@@ -1,0 +1,61 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | Усі курси | DEUTSCH TREND
+block main
+  .wrapper
+    .content
+      include includes/header-inside
+      
+      .container
+        h1.title.title--h1 Усі курси
+
+        .bread-crumbs
+          ul 
+            li 
+              a(href="#") Головна
+
+            li Усі курси
+
+
+
+      block vars
+        - var title = "Для новачків";
+        - var titleClass = "title--colored-small title--gray-bg";
+      include includes/courses-section
+
+      block vars
+        - var title = "Рівень А1";
+      include includes/courses-section
+      
+      block vars
+        - var title = "Рівень A2";
+      include includes/courses-section
+
+      block vars
+        - var title = "Рівень B1";
+      include includes/courses-section
+
+      block vars
+        - var title = "Мини-курси";
+      include includes/courses-section
+        
+      
+
+      
+         
+     
+
+    
+    include includes/footer
+
+
+  include includes/scripts 

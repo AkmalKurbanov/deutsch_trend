@@ -1,0 +1,224 @@
+extends layouts/main
+
+block variables
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | Пакет “Вдалий старт” | DEUTSCH TREND
+block main
+  .wrapper
+    .content
+      include includes/header-inside
+      
+      .course-package-detail
+        .container
+          h1.title.title--h1 Пакет “Вдалий старт”
+
+          .bread-crumbs
+            ul 
+              li 
+                a(href="#") Головна
+
+              li Пакет “Вдалий старт”
+
+            a.btn.btn--primary(href="#")  Перейти на сторінку всіх курсів
+
+        .gray-bg 
+          .container 
+            .typical-block.typical-block--horizontal 
+              .typical-block__col 
+                a(href="#").typical-block__img
+                  img(loading="lazy"  src="images/dist/course-package-detail.webp", alt="") 
+              .typical-block__col
+                div
+                  h3.title.title--h3.title--colored-small(data-aos="zoom-in")
+                    .title__wrap Складова пакета
+                  ul 
+                    li Курс а1.1 
+                    li Курс а2.1 
+                    li Литературный курс
+                    li Футболка в подарок   
+                  .text 
+                    p Доступ к курсам пакета - 9 месяцев 
+
+                .course-package-detail__price-block
+                  .course-package-detail__price-block-item
+                    .course-package-detail__price
+                      span 188.00€
+                      | 165.00€
+
+                  .course-package-detail__price-block-item
+                    a.solid-radial.solid-radial--btn.solid-radial--pc(href="#")  покласти в кошик
+
+          .container
+            .course-package-detail__flex-wrap 
+              .course-package-detail__flex-col 
+                .typical-block 
+                  h3.title.title--h3.title--colored-small(data-aos="zoom-in")
+                    .title__wrap Детальніше про курси пакета 
+
+                  .list.list--accordion
+                    .list__accordion-item
+                      a.btn.btn--primary(href="#")
+                        .icon
+                          svg(width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path.line1(fill-rule='evenodd' clip-rule='evenodd' d='M12.5313 4.25C12.9455 4.25054 13.2809 4.58677 13.2803 5.00098L13.262 19.001C13.2614 19.4152 12.9252 19.7505 12.511 19.75C12.0968 19.7495 11.7614 19.4132 11.762 18.999L11.7803 4.99902C11.7809 4.5848 12.1171 4.24946 12.5313 4.25Z' fill='#131313')
+                            path.line2(fill-rule='evenodd' clip-rule='evenodd' d='M4.75 12C4.75 11.5858 5.08579 11.25 5.5 11.25H19.5C19.9142 11.25 20.25 11.5858 20.25 12C20.25 12.4142 19.9142 12.75 19.5 12.75H5.5C5.08579 12.75 4.75 12.4142 4.75 12Z' fill='#131313')
+                        span Курс А1.1
+
+                      .list__accordion-item-hide 
+                        h3.title.title--h3.title--colored-small(data-aos="zoom-in")
+                          .title__wrap Складова курсу
+
+                        ul 
+                          li 12 видео лекций
+                          li Практические задания к каждому уроку с ответами в отдельном файле (pdf)
+                          li Чек-лист (pdf) и аудио записи с новыми словами к каждой лекции
+                          li Лист прогресса, чтобы отслеживать свои успехи (pdf)
+                          li Финальный тест по завершению курса  
+                      
+                        h3.title.title--h3.title--colored-small(data-aos="zoom-in")
+                          .title__wrap Результати
+
+                        p  Після завершення курсу Ви зможете:
+                        
+                        ul
+                          li Спілкуватися з друзями та колегами на побутові теми
+                          li Писати друзям повідомлення
+                          li Складати прості, але коректні офіційні листи
+                          li Відчувати себе впевнено навіть у незнайомих ситуаціях
+                          li Ви готові для проходження курсу А2.2  
+                    .list__accordion-item
+                      a.btn.btn--primary(href="#")
+                        .icon
+                          svg(width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path.line1(fill-rule='evenodd' clip-rule='evenodd' d='M12.5313 4.25C12.9455 4.25054 13.2809 4.58677 13.2803 5.00098L13.262 19.001C13.2614 19.4152 12.9252 19.7505 12.511 19.75C12.0968 19.7495 11.7614 19.4132 11.762 18.999L11.7803 4.99902C11.7809 4.5848 12.1171 4.24946 12.5313 4.25Z' fill='#131313')
+                            path.line2(fill-rule='evenodd' clip-rule='evenodd' d='M4.75 12C4.75 11.5858 5.08579 11.25 5.5 11.25H19.5C19.9142 11.25 20.25 11.5858 20.25 12C20.25 12.4142 19.9142 12.75 19.5 12.75H5.5C5.08579 12.75 4.75 12.4142 4.75 12Z' fill='#131313')
+                        span Курс А2.1
+
+                      .list__accordion-item-hide 
+                        h3.title.title--h3.title--colored-small(data-aos="zoom-in")
+                          .title__wrap Складова курсу
+
+                        ul 
+                          li 12 видео лекций
+                          li Практические задания к каждому уроку с ответами в отдельном файле (pdf)
+                          li Чек-лист (pdf) и аудио записи с новыми словами к каждой лекции
+                          li Лист прогресса, чтобы отслеживать свои успехи (pdf)
+                          li Финальный тест по завершению курса  
+                      
+                        h3.title.title--h3.title--colored-small(data-aos="zoom-in")
+                          .title__wrap Результати
+
+                        p  Після завершення курсу Ви зможете:
+                        
+                        ul
+                          li Спілкуватися з друзями та колегами на побутові теми
+                          li Писати друзям повідомлення
+                          li Складати прості, але коректні офіційні листи
+                          li Відчувати себе впевнено навіть у незнайомих ситуаціях
+                          li Ви готові для проходження курсу А2.2  
+                    .list__accordion-item
+                      a.btn.btn--primary(href="#")
+                        .icon
+                          svg(width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path.line1(fill-rule='evenodd' clip-rule='evenodd' d='M12.5313 4.25C12.9455 4.25054 13.2809 4.58677 13.2803 5.00098L13.262 19.001C13.2614 19.4152 12.9252 19.7505 12.511 19.75C12.0968 19.7495 11.7614 19.4132 11.762 18.999L11.7803 4.99902C11.7809 4.5848 12.1171 4.24946 12.5313 4.25Z' fill='#131313')
+                            path.line2(fill-rule='evenodd' clip-rule='evenodd' d='M4.75 12C4.75 11.5858 5.08579 11.25 5.5 11.25H19.5C19.9142 11.25 20.25 11.5858 20.25 12C20.25 12.4142 19.9142 12.75 19.5 12.75H5.5C5.08579 12.75 4.75 12.4142 4.75 12Z' fill='#131313')
+                        span Літературний курс 
+
+                      .list__accordion-item-hide 
+                        h3.title.title--h3.title--colored-small(data-aos="zoom-in")
+                          .title__wrap Складова курсу
+
+                        ul 
+                          li 12 видео лекций
+                          li Практические задания к каждому уроку с ответами в отдельном файле (pdf)
+                          li Чек-лист (pdf) и аудио записи с новыми словами к каждой лекции
+                          li Лист прогресса, чтобы отслеживать свои успехи (pdf)
+                          li Финальный тест по завершению курса  
+                      
+                        h3.title.title--h3.title--colored-small(data-aos="zoom-in")
+                          .title__wrap Результати
+
+                        p  Після завершення курсу Ви зможете:
+                        
+                        ul
+                          li Спілкуватися з друзями та колегами на побутові теми
+                          li Писати друзям повідомлення
+                          li Складати прості, але коректні офіційні листи
+                          li Відчувати себе впевнено навіть у незнайомих ситуаціях
+                          li Ви готові для проходження курсу А2.2  
+                    
+              .course-package-detail__flex-col 
+                .typical-block
+                  h3.title.title--h3.title--colored-small(data-aos="zoom-in")
+                    .title__wrap Переваги пакета  
+
+                  .typical-block
+                    ul
+                      li Два граматичні курси А1.2 + А2.1:
+                      li Deutsch Start 2 (A1.2) українською
+                      li Deutsch Basis 1 (A2.1) українською
+                      li 24 об’ємні відеоуроки по 35 — 45 хвилин
+                      li 24 чек-листи з тематичною лексикою
+                      li 24 домашніх завдання
+                      li 24 додаткових аудіофайлів
+                      li Доступ до уроків — в особистому кабінеті на цьому сайті
+                      li Доступ до курсів — 9 місяців
+
+                    .course-detail__rate-title
+                      .course-detail__rate-icon
+                        svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M2.2915 8.33329C2.2915 7.98812 2.57133 7.70829 2.9165 7.70829H17.0832C17.4283 7.70829 17.7082 7.98812 17.7082 8.33329V18.3333C17.7082 18.6785 17.4283 18.9583 17.0832 18.9583H2.9165C2.57133 18.9583 2.2915 18.6785 2.2915 18.3333V8.33329ZM3.5415 8.95829V17.7083H16.4582V8.95829H3.5415Z' fill='#F8A5D5')
+                          path(d='M9.99984 7.70829C10.345 7.70829 10.6248 7.98812 10.6248 8.33329V18.3333C10.6248 18.6785 10.345 18.9583 9.99984 18.9583C9.65466 18.9583 9.37484 18.6785 9.37484 18.3333V8.33329C9.37484 7.98812 9.65466 7.70829 9.99984 7.70829Z' fill='#F8A5D5')
+                          path(fill-rule='evenodd' clip-rule='evenodd' d='M2.2915 18.3333C2.2915 17.9881 2.57133 17.7083 2.9165 17.7083H17.0832C17.4283 17.7083 17.7082 17.9881 17.7082 18.3333C17.7082 18.6785 17.4283 18.9583 17.0832 18.9583H2.9165C2.57133 18.9583 2.2915 18.6785 2.2915 18.3333Z' fill='#F8A5D5')
+                          path(d='M1.0415 4.99996C1.0415 4.65478 1.32133 4.37496 1.6665 4.37496H18.3332C18.6783 4.37496 18.9582 4.65478 18.9582 4.99996V8.33329C18.9582 8.67847 18.6783 8.95829 18.3332 8.95829H1.6665C1.32133 8.95829 1.0415 8.67847 1.0415 8.33329V4.99996ZM2.2915 5.62496V7.70829H17.7082V5.62496H2.2915Z' fill='#F8A5D5')
+                          path(d='M6.22456 1.22468C6.46864 0.980607 6.86437 0.980607 7.10845 1.22468L9.99984 4.11608L12.8912 1.22468C13.1353 0.980607 13.531 0.980607 13.7751 1.22468C14.0192 1.46876 14.0192 1.86449 13.7751 2.10857L10.4418 5.4419C10.1977 5.68598 9.80197 5.68598 9.5579 5.4419L6.22456 2.10857C5.98048 1.86449 5.98048 1.46876 6.22456 1.22468Z' fill='#F8A5D5')
+                      | Бонусы:
+
+                    ul 
+                      li Можливість підключитися до чату студентів у Telegram. На запитання за матеріалами уроків у чаті відповідає Ольга Назаренко.
+
+
+                  .typical-block.course-package-detail__form 
+                    form(action="") 
+                      p.fw-800 Виберіть розмір футболки
+
+                      .select
+                        .select__selected
+                          input(type="hidden" value="")
+                          span XS-S
+                          .select__arrow 
+                            svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                              path(d='M4.97468 7.05806C5.21876 6.81398 5.61449 6.81398 5.85857 7.05806L10.4166 11.6161L14.9747 7.05806C15.2188 6.81398 15.6145 6.81398 15.8586 7.05806C16.1026 7.30214 16.1026 7.69786 15.8586 7.94194L10.8586 12.9419C10.6145 13.186 10.2188 13.186 9.97468 12.9419L4.97468 7.94194C4.73061 7.69786 4.73061 7.30214 4.97468 7.05806Z' fill='#BABABA')
+                        .select__dropdown.shadow
+                          .select__dropdown-option(data-option="XS-S") XS-S 
+                          .select__dropdown-option(data-option="S") S 
+                          .select__dropdown-option(data-option="M") M 
+                          .select__dropdown-option(data-option="XL") XL 
+                      
+                      label(for="address").fw-800 Адресу, куди надіслати подарунок
+                      .input
+                        input(type="text")#address
+
+                    .tac 
+                      p Увага: футболка в подарудок надсилається лише на адресу в Німеччині або Україні.
+                      p Проте листівка з підписом Ольги лише для тих, хто перебуває у Німеччині.  
+
+                                            
+                  
+
+
+         
+     
+
+    
+    include includes/footer
+
+
+  include includes/scripts 

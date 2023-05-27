@@ -1,10 +1,11 @@
-block vars
+block variables
   - var description;
   - var keywords;
   - var ogtitle;
   - var ogtype;
   - var ogurl;
   - var ogimg;
+  - var themecolor;
 
 doctype html
 html(lang="en")
@@ -23,9 +24,9 @@ html(lang="en")
     meta(property='og:url' content=ogurl)
     meta(property='og:image' content=ogimg)
 
-    meta(name='theme-color' content='#005891')
-    meta(name='msapplication-navbutton-color' content='#005891')
-    meta(name='apple-mobile-web-app-status-bar-style' content='#005891')
+    meta(name='theme-color' content="#F8A5D5")
+    meta(name='msapplication-navbutton-color' content="#F8A5D5")
+    meta(name='apple-mobile-web-app-status-bar-style' content="#F8A5D5")
     
       
     link(rel="stylesheet" href="css/app.min.css")
@@ -36,4 +37,5 @@ html(lang="en")
     
 
 body
+  include ../includes/mmenu
   block main

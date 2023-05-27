@@ -1,0 +1,96 @@
+.menu
+  position: fixed
+  width: 100%
+  height: 100%
+  z-index: 9
+  opacity: 0
+  pointer-events: none
+
+  &:before
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    background: rgba($dark, .5)  
+
+  &__window
+    background: $white
+    max-width: rem(320)
+    width: 100%
+    height: 100%
+    padding: rem(20) 0
+    position: relative
+    transform: translateX(-100%)
+
+    @include xs
+      max-width: rem(270)
+
+    .logo
+      margin: auto
+      margin-bottom: rem(30)
+
+  &__nav
+    ul
+      margin: 0
+      padding: 0
+
+      li
+        list-style: none
+
+        a
+          padding: rem(10) rem(15) rem(10) rem(25)
+          display: block
+          font-weight: 500
+          color: $dark
+
+          &:hover
+            background: $primary
+
+  &__btn-wrap
+    padding: 0 rem(25)
+    margin: rem(20) 0
+    
+    .btn
+      @include xs
+        font-size: rem(12)
+
+  &__social
+    justify-content: flex-start
+    padding-left: rem(25)
+
+    ul
+      margin: 0
+      padding: 0
+      li
+        a
+          background: $primary
+
+          &:hover
+            background: #C0FF72
+
+            svg
+              fill: $dark
+
+              path
+                fill: $dark
+
+  &.open
+    opacity: 1
+    pointer-events: inherit
+    transition: $transition
+
+    .menu__window
+      transform: none
+      transition: $transition
+      transition-delay: .3s
+
+  .hamburger
+    display: block
+    position: absolute
+    left: calc( 100% + 20px )
+    
+    @include xs
+      left: calc( 100% + 10px )
+    
+    span
+      transition-delay: .4s!important

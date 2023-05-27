@@ -1,0 +1,97 @@
+extends layouts/main
+
+block variables
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | Пакети курсів | DEUTSCH TREND
+block main
+  .wrapper
+    .content
+      include includes/header-inside
+      
+      .course-package-detail
+        .container
+          h1.title.title--h1 Пакет курсів
+
+          .bread-crumbs
+            ul 
+              li 
+                a(href="#") Головна
+
+              li Пакет курсів
+
+            a.btn.btn--primary(href="#")  Перейти на сторінку всіх курсів
+
+          .courses-packages__flex-wrap
+            .courses-packages__item.shadow
+              .courses-packages__item-wrap
+                .courses-packages__item-top
+                  div
+                    h2.title.title--h2 Вдалий Старт
+                    span Весна 2023
+                  .solid-radial росiйською  
+                .courses-packages__item-middle
+                  h3.title.title--h3.title--ttu Включає:
+                  .courses-packages__item-middle-wrap
+                    .courses-packages__item-middle-col
+                      ul 
+                        li Курс А1.1 PLUS
+                        li Курс А1.2 PLUS
+                    .courses-packages__item-middle-col
+                      svg(width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(d='M3.09375 11.25C3.09375 10.784 3.47151 10.4062 3.9375 10.4062H23.0625C23.5285 10.4062 23.9062 10.784 23.9062 11.25V24.75C23.9062 25.216 23.5285 25.5938 23.0625 25.5938H3.9375C3.47151 25.5938 3.09375 25.216 3.09375 24.75V11.25ZM4.78125 12.0938V23.9062H22.2188V12.0938H4.78125Z' fill='#F8A5D5')
+                        path(d='M13.5 10.4062C13.966 10.4062 14.3438 10.784 14.3438 11.25V24.75C14.3438 25.216 13.966 25.5938 13.5 25.5938C13.034 25.5938 12.6562 25.216 12.6562 24.75V11.25C12.6562 10.784 13.034 10.4062 13.5 10.4062Z' fill='#F8A5D5')
+                        path(fill-rule='evenodd' clip-rule='evenodd' d='M3.09375 24.75C3.09375 24.284 3.47151 23.9062 3.9375 23.9062H23.0625C23.5285 23.9062 23.9062 24.284 23.9062 24.75C23.9062 25.216 23.5285 25.5938 23.0625 25.5938H3.9375C3.47151 25.5938 3.09375 25.216 3.09375 24.75Z' fill='#F8A5D5')
+                        path(d='M1.40625 6.75C1.40625 6.28401 1.78401 5.90625 2.25 5.90625H24.75C25.216 5.90625 25.5938 6.28401 25.5938 6.75V11.25C25.5938 11.716 25.216 12.0938 24.75 12.0938H2.25C1.78401 12.0938 1.40625 11.716 1.40625 11.25V6.75ZM3.09375 7.59375V10.4062H23.9062V7.59375H3.09375Z' fill='#F8A5D5')
+                        path(d='M8.40338 1.65338C8.73288 1.32387 9.26712 1.32387 9.59662 1.65338L13.5 5.55676L17.4034 1.65338C17.7329 1.32387 18.2671 1.32387 18.5966 1.65338C18.9261 1.98288 18.9261 2.51712 18.5966 2.84662L14.0966 7.34662C13.7671 7.67613 13.2329 7.67613 12.9034 7.34662L8.40338 2.84662C8.07387 2.51712 8.07387 1.98288 8.40338 1.65338Z' fill='#F8A5D5')
+
+                      ul 
+                        li + Футболка DeutschTrend від Ольги Назаренко з авторським дизайном
+                        li + Закладка для улюбленої книги
+                  s Доступ до курсів – 9 місяців з моменту оплати.  
+
+              .courses-packages__item-bottom
+                a.solid-radial.solid-radial--btn.solid-radial--wc(href="#") докладніше 
+                .courses-packages__item-price
+                  span 238.00€
+                  | 209.00€
+
+            .courses-packages__item.shadow
+              .courses-packages__item-wrap
+                .courses-packages__item-top
+                  div
+                    h2.title.title--h2 Вдалий Старт
+                    span Весна 2023
+                  .solid-radial українською  
+                .courses-packages__item-middle
+                  h3.title.title--h3.title--ttu Включає:
+                  .courses-packages__item-middle-wrap
+                    .courses-packages__item-middle-col
+                      ul 
+                        li Курс А1.1 PLUS
+                        li Курс А1.2 PLUS
+                  s Доступ до курсів – 9 місяців з моменту оплати.  
+                  .courses-packages__item-img
+                    img(loading="lazy"  src="images/dist/courses.webp", alt="")    
+              .courses-packages__item-bottom
+                a.solid-radial.solid-radial--btn.solid-radial--wc(href="#") докладніше 
+                .courses-packages__item-price
+                  span 238.00€
+                  | 209.00€
+
+
+
+         
+     
+
+    
+    include includes/footer
+
+
+  include includes/scripts 

@@ -1,0 +1,60 @@
+.not-found
+  padding: rem(100) 0
+
+  &__window-wrap
+    padding: rem(40) 0
+    position: relative
+    max-width: rem(650)
+    width: 100%
+    margin: auto
+
+  
+  .stroke-primary
+    position: absolute
+    transform: none
+    min-height: rem(88)
+    max-height: rem(88)
+    width: calc( 100% + 115px )
+
+    span
+      transform: none
+      left: auto
+      top: auto
+      width: 100%
+      height: 100%
+    
+    &:first-child
+      top: 0
+      left: rem(-10)
+
+    &:last-child
+      bottom: 0  
+      right: rem(10)
+      transform: rotateY(180deg)
+      span
+        &:before
+          transition-delay: .5s
+
+  &__message-window
+    padding: rem(40)
+    z-index: 2
+    position: relative
+
+
+    .title
+      @include aic
+      margin-bottom: rem(20)
+      line-height: rem(30)
+      letter-spacing: normal
+
+      span
+        font-family: $userfont2
+        font-weight: 800
+        font-size: rem(100)
+        line-height: rem(90)
+        color: $primary
+        margin-right: rem(30)
+        letter-spacing: 0.1em
+
+    p
+      margin-bottom: rem(40)

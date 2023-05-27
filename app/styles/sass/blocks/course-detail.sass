@@ -1,0 +1,395 @@
+.course-detail
+  margin-top: rem(100)
+
+  @include lg
+    margin-top: rem(80)
+
+  @include md
+    margin-top: rem(60)
+
+  @include sm
+    margin-top: rem(40)
+  
+  .typical-block
+    margin-bottom: rem(40)
+
+    @include lg
+      margin-bottom: rem(35)
+    @include md
+      margin-bottom: rem(30)
+    @include sm
+      margin-bottom: rem(25)
+    @include xs
+      margin-bottom: rem(20)
+    
+    
+  
+  &__tags
+    margin-top: rem(40)
+    margin-bottom: rem(30)
+    position: relative
+    z-index: 2
+    
+    @include lg
+      margin-top: rem(30)
+
+    ul
+      @include fww
+      padding: 0
+      margin: 0
+
+      li
+        list-style-type: disc
+        padding-left: rem(15)
+        margin-right: rem(10)
+        position: relative
+        text-transform: uppercase
+        letter-spacing: 0.1em
+        position: relative
+        list-style: none
+        
+        &:before
+          position: absolute
+          content: ''
+          width: rem(5)
+          height: rem(5)
+          border-radius: 100%
+          background: $dark
+          top: rem(7)
+          left: 0
+          
+        
+        @include xs
+          padding-left: rem(10)
+          margin-right: rem(5)
+        
+        &:first-child
+          padding-left: 0
+          
+          &:before
+            display: none
+            
+        
+        a
+          color: $dark
+          font-weight: 800
+          font-family: $userfont2
+          @include lg
+            font-size: rem(15)
+          @include md
+            font-size: rem(14)
+          @include sm
+            font-size: rem(13)
+          @include xs
+            font-size: rem(12)
+          &:hover
+            color: $primary
+
+  &__flex-wrap
+    @include jfcsb
+
+    @include md
+      flex-direction: column
+
+  &__flex-col
+    width: calc( 50% - 20px )  
+
+    @include lg
+      width: calc( 50% - 17px )  
+
+    @include md
+      width: 100% 
+
+  &__reviews
+    margin-bottom: rem(20)!important
+    padding: rem(30)
+
+    @include lg
+      padding: rem(25)    
+    @include md
+      padding: rem(20)    
+    @include sm
+      padding: rem(15)    
+    @include xs
+      padding: rem(10)   
+
+    &:last-child
+      margin-bottom: 0!important
+
+    
+  &__reviewer
+    &-wrap
+      @include aic
+
+      @media (max-width: 460px)
+        flex-direction: column
+        text-align: center
+
+    &-col
+      &:first-child
+        margin-right: rem(15)
+
+        @media (max-width: 460px)
+          margin-right: 0
+          margin-bottom: rem(10)
+
+    &-img
+      width: rem(80)
+      height: rem(80)
+      border-radius: 100%
+      @include aic-jcc
+      overflow: hidden
+
+      
+
+    &-theme
+      font-weight: 700
+      font-size: rem(18)
+      line-height: rem(22)
+      margin-bottom: rem(5)
+
+      @media (max-width: 460px)
+        font-size: rem(16)
+
+    &-name
+      font-size: rem(12)
+      line-height: rem(14)
+      font-weight: 400
+
+    [data-rating='1']
+      .course-detail__reviewer-rating-star
+        &:first-child
+          svg
+            fill: #F9D231
+
+    [data-rating='2']
+      .course-detail__reviewer-rating-star
+        &:first-child,
+        &:nth-child(2)
+          svg
+            fill: #F9D231
+
+    [data-rating='3']
+      .course-detail__reviewer-rating-star
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3)
+          svg
+            fill: #F9D231
+
+    [data-rating='4']
+      .course-detail__reviewer-rating-star
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4)
+          svg
+            fill: #F9D231
+
+    [data-rating='5']
+      .course-detail__reviewer-rating-star
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5)
+          svg
+            fill: #F9D231
+
+    &-rating
+      @include aic
+      margin-top: rem(10)
+
+        
+
+      &-star
+        width: rem(18)
+        height: rem(18)
+        @include aic-jcc
+        margin-right: rem(3)
+
+        svg
+          fill: rgba(152, 156, 166, 0.15)
+
+
+        &:last-child
+          margin-right: 0
+        
+
+    .text
+      margin-top: rem(20)
+      p
+        font-weight: 400
+        font-size: rem(16)  
+
+        @include lg
+          font-size: rem(15)  
+        @include md
+          font-size: rem(14)  
+
+  &__rate
+    margin-bottom: rem(30)
+    border-radius: 0 0 rem(10) rem(10)
+    box-shadow: 0px 4px 8px rgba(152, 156, 166, 0.15)
+    overflow: hidden
+    position: relative
+
+    &:after
+      position: absolute
+      content: ''
+      background: url('/images/dist/block-bg.webp')
+      width: rem(825)
+      height: rem(335)
+      background-size: cover 
+      top: rem(90)
+      left: 50%
+      transform: translateX(-50%)
+      pointer-events: none
+
+    &:last-child
+      margin-bottom: 0
+
+    &-wrap   
+      padding: rem(30)    
+
+      @include lg
+        padding: rem(25)    
+      @include md
+        padding: rem(20)    
+      @include sm
+        padding: rem(15)    
+      @include xs
+        padding: rem(10)    
+      
+    &-name
+      background: $primary
+      
+    &-title
+      @include aic
+      font-family: $userfont2
+      font-weight: 700
+      text-transform: uppercase
+      margin-bottom: rem(20)
+    
+    &-icon
+      margin-right: rem(10)
+      width: rem(20)
+      height: rem(20)
+      @include aic-jcc
+
+      svg
+        width: 100%
+        fill: $primary  
+        
+        path
+          fill: $primary  
+
+
+    &-additional-info
+      margin: rem(20) 0
+
+      ul
+        li
+          list-style: none
+          position: relative
+
+          &::before
+            position: absolute
+            content: '+'
+            left: rem(-19)
+            color: $primary
+
+      &-title
+        text-transform: uppercase
+        color: $primary
+        font-weight: 700
+        position: relative
+        text-align: center
+        margin: rem(20) 0
+
+        span
+          position: relative
+          z-index: 1
+          background: $white
+          padding: rem(5) rem(20)
+
+        &:after
+          position: absolute
+          content: ''
+          width: 100%
+          height: rem(1)
+          background: $primary   
+          top: 50%
+          left: 50%
+          transform: translate(-50%,-50%)
+
+    &-btn-wrap
+      @include xs
+        @include fdc
+
+      .solid-radial
+        margin-right: rem(30)
+        border: rem(2) solid transparent
+        
+        @include xs
+          margin-right: 0
+          margin-bottom: rem(15)
+
+        &:last-child
+          margin-right: 0
+      
+      button.solid-radial,
+      a.solid-radial
+        &:hover
+            border-color: $primary
+
+    
+
+
+    &-price
+      font-size: rem(25)
+      font-weight: 700
+
+      @include lg
+        font-size: rem(23)
+      @include md
+        font-size: rem(21)
+      
+      @media (max-width: 460px)
+        margin-bottom: rem(10)
+
+    &:nth-child(2n)
+      .course-detail__rate-name
+        background: $secondary
+
+      .course-detail__rate-icon
+        svg
+          fill: $secondarylight  
+          
+          path
+            fill: $secondarylight  
+      
+      button.solid-radial,
+      a.solid-radial
+        &:hover
+          border-color: $secondary
+      
+      .typical-block__bottom
+        background: $secondary    
+
+        button.solid-radial,
+        a.solid-radial
+          &:hover
+            background: $primary
+         
+      .course-detail__rate-additional-info
+        ul
+          li
+            &:before
+              color: $secondarylight
+        
+        &-title
+          color: $secondarylight
+          
+          &:after
+            background: $secondarylight

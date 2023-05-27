@@ -1,0 +1,24 @@
+block vars
+  - var title;
+  - var titleClass;
+  - var lazyLad;
+.gray-bg.courses-section(data-aos="fade-up")
+  .container
+    h2.title.title--h2(class=titleClass)
+      .title__wrap=title 
+    .courses-section__wrap
+      each course in [1,2,3,1,2,3]
+        .courses-section__item.shadow.border-radius
+          a(href="#").courses-section__item-img
+            img(loading="lazy" lazyLad src="images/dist/beginners"+course+".webp", alt="" width="350" height="205")
+          .courses-section__item-bottom
+            .courses-section__item-price 119.00€
+            a(href="#").btn.btn--primary У кошик
+    .jfcfe
+      a.btn.btn--primary(href="#")
+        .icon
+          svg(width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(fill-rule='evenodd' clip-rule='evenodd' d='M6.51711 2.30206C6.74148 2.30236 6.92313 2.48448 6.92283 2.70885L6.91289 10.2922C6.9126 10.5165 6.73048 10.6982 6.50611 10.6979C6.28174 10.6976 6.1001 10.5155 6.10039 10.2911L6.11033 2.70778C6.11063 2.48342 6.29275 2.30177 6.51711 2.30206Z' fill='#131313')
+            path(fill-rule='evenodd' clip-rule='evenodd' d='M2.30225 6.49998C2.30225 6.27561 2.48413 6.09373 2.7085 6.09373H10.2918C10.5162 6.09373 10.6981 6.27561 10.6981 6.49998C10.6981 6.72435 10.5162 6.90623 10.2918 6.90623H2.7085C2.48413 6.90623 2.30225 6.72435 2.30225 6.49998Z' fill='#131313')
+        
+        | подивитися інші курси

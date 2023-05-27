@@ -1,0 +1,109 @@
+.hero
+  overflow: hidden
+  
+  @include xs
+    padding: rem(30) 0  0
+    
+
+  .container
+    height: 100%
+    
+  .title
+    margin-bottom: 0
+    
+    span
+      @include xs
+        width: rem(450)
+      
+      &:before
+        @include xs
+          display: none
+  
+  .subtitle
+    @include xs 
+      font-size: rem(20)
+
+  .text
+    margin-top: rem(35)
+
+    @include lg
+      margin-top: rem(15)
+
+    @include md
+      margin-top: rem(10)
+    
+    @include xs
+      font-weight: 400
+      color: $white
+      text-shadow: rgb(170, 225, 101) 2px 0px 0px, rgb(170, 225, 101) 1.75517px 0.958851px 0px, rgb(170, 225, 101) 1.0806px 1.68294px 0px, rgb(170, 225, 101) 0.141474px 1.99499px 0px, rgb(170, 225, 101) -0.832294px 1.81859px 0px, rgb(170, 225, 101) -1.60229px 1.19694px 0px, rgb(170, 225, 101) -1.97998px 0.28224px 0px, rgb(170, 225, 101) -1.87291px -0.701566px 0px, rgb(170, 225, 101) -1.30729px -1.5136px 0px, rgb(170, 225, 101) -0.421592px -1.95506px 0px, rgb(170, 225, 101) 0.567324px -1.91785px 0px, rgb(170, 225, 101) 1.41734px -1.41108px 0px, rgb(170, 225, 101) 1.92034px -0.558831px 0px
+    
+
+  &__flex-wrap
+    @include aistr-jfcsb 
+    
+    @include xs  
+      min-height: rem(350) 
+      align-items: flex-end
+      justify-content: center
+      text-align: center
+      
+
+  &__flex-item
+
+    &:first-child
+      @include aic
+
+      @include xs
+        padding-bottom: rem(40)      
+
+    &:last-child
+      @include xs
+        position: absolute
+        @include aife
+
+  &__img
+    max-width: rem(467)
+    width: 100%
+    @include aife-jcc
+    position: relative
+
+    @include lg
+      max-width: rem(350)
+
+    @include sm
+      max-width: rem(230)
+
+    &:after
+      position: absolute
+      content: ''
+      width: rem(430)
+      height: rem(430)
+      border-radius: 100%
+      background: $primary
+      z-index: -1
+      right: rem(-120)
+      bottom: rem(-80)
+
+      @include lg
+        width: rem(350)
+        height: rem(350)
+
+      @include sm
+        width: rem(230)
+        height: rem(230)
+        right: rem(-90)
+
+      @include xs
+        width: rem(400)
+        height: rem(400)
+
+    .desk
+      @include xs
+        display: none     
+    
+    .mob
+      display: none
+      filter: grayscale(1)
+      @include xs
+        display: block
+        

@@ -1,3 +1,79 @@
 .header
+  padding: rem(50) 0  
+  background: $white
   
-	
+
+  @include lg
+    padding: rem(30) 0
+
+  @include md
+    padding: rem(20) 0
+
+  @include sm
+    padding: rem(10) 0
+
+  &__flex-wrap
+    @include aic-jfcsb
+
+  &__flex-item
+    
+    &:nth-child(2)
+      @include aic-jfcsb
+      
+      @include lg
+        display: none
+    
+    .btn
+      margin-left: rem(35)    
+
+  &__nav
+    ul
+      li
+        display: inline-block
+        margin-right: rem(60)
+
+        &:last-child
+          margin-right: 0
+        
+        a
+          font-weight: 700
+          color: $dark
+          transition: $transition
+
+          &:hover
+            color: $secondarylight
+            
+  
+
+  &--sticky
+    padding: rem(20)   
+    box-shadow: 2px 0 12px 0 rgba(0,0,0,.15)
+    position: fixed
+    top: -100%
+    left: 0
+    right: 0
+    width: 100%
+    z-index: 9
+    transition: $transition 
+
+    @include sm
+      padding: rem(10) 0
+      
+    &.sticky-on
+      top: 0
+      transition-delay: .7s
+
+    .logo
+      max-width: rem(100) 
+    
+    .header__flex-item
+      &:nth-child(2)
+        display: none
+        
+    .hamburger
+      display: block
+                
+  &.modified
+    opacity: 0
+    pointer-events: none     
+    transition-delay: .3s    

@@ -1,0 +1,48 @@
+.free-lessons
+  margin-top: rem(30)
+  
+  &__flex-wrap 
+    @include jfcsb
+    align-items: flex-start
+
+    @include sm
+      flex-direction: column
+
+    &:last-child
+      margin-top: rem(35)
+
+  &__flex-col
+    @include fww-jfcsb
+    width: calc( 50% - 25px )
+
+    @include lg
+      width: calc( 50% - 10px )
+
+    @include sm
+      width: 100%  
+
+    .list
+      width: 100%
+
+    .typical-block
+      .text
+        @include lg
+          margin-bottom: rem(13)
+
+    &:last-child
+      .typical-block
+        padding: rem(20)
+        width: calc( 50% - 10px )
+        margin-bottom: rem(25)
+
+        @include lg
+          margin-bottom: rem(15)
+
+        @include md
+          width: 100%  
+
+        .btn
+          margin-top: 0
+
+        
+        

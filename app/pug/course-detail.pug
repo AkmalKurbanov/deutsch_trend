@@ -1,0 +1,243 @@
+extends layouts/main
+
+block variables
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | Deutsch Basic 1 (A2.1) | DEUTSCH TREND
+block main
+  .wrapper
+    .content
+      include includes/header-inside
+
+      .course-detail 
+        .container 
+          h1.title.title--h1.title--colored-big
+            .title__wrap Deutsch Basic 1 (A2.1)
+          
+          .course-detail__tags
+            ul 
+              li
+                a(href="#") Відео уроки 
+              li
+                a(href="#") практичні завдання 
+              li
+                a(href="#") Чек-листи з лексикою 
+              li
+                a(href="#") аудіо-доріжки з новими словами 
+              li
+                a(href="#") фінальний тест 
+              li
+                a(href="#") знижка на наступний курс 
+              li
+                a(href="#") Доступ - 6 місяців 
+              li
+                a(href="#") практичний блок з текстами   
+
+          .bread-crumbs
+            ul 
+              li 
+                a(href="#") Головна
+
+              li Deutsch Basic 1 (A2.1)   
+
+            a.btn.btn--primary(href="#")  перейти до наступного курсу
+    
+        .gray-bg
+          .container 
+            .typical-block.typical-block--horizontal 
+              .typical-block__col 
+                .typical-block__img
+                  img(loading="lazy" src="images/dist/detail.webp", alt="") 
+              .typical-block__col 
+                .text 
+                  p Закохаєтеся в німецьку мову - вчіться в своєму темпі, коли і де Вам зручно.
+                    | Повноцінний граматичний курс для тих, хто продовжує вчити німецьку.
+
+                a.btn.btn--primary(href="#") перейти до безкоштовного уроку
+
+                .tar 
+                  p.ttu Курс веде Ольга Назаренко
+
+            .course-detail__flex-wrap 
+              .course-detail__flex-col 
+                .typical-block
+                  h3.title.title--h3.title--colored-small(data-aos="zoom-in")
+                    .title__wrap Цей курс для Вас
+                  p Якщо Ви:  
+                  br
+                  ul
+                    li Володієте рівнем А1
+                    li Готуєтеся до іспиту А2 / В1
+                    li Хочете впевнено себе почувати, спілкуючись усно або письмово німецькою мовою
+                    li Цінуєте свій час і вибираєте вчитися в комфортній обстановці
+                  
+                  h3.title.title--h3.title--colored-small(data-aos="zoom-in")
+                    .title__wrap Результати
+                  p Після завершення курсу Ви зможете: 
+                  br
+                  ul
+                    li Спілкуватися з друзями та колегами на побутові теми
+                    li Писати друзям повідомлення
+                    li Складати прості, але коректні офіційні листи
+                    li Відчувати себе впевнено навіть у незнайомих ситуаціях
+                    li Ви готові для проходження курсу А2.2    
+
+
+                include includes/list-lessons
+
+                
+                .typical-block
+                  h3.title.title--h3.title--colored-small(data-aos="zoom-in") 
+                    .title__wrap Відгуки
+                  mixin rating(star)
+                    .course-detail__reviews.typical-block  
+                      .course-detail__reviewer
+                        .course-detail__reviewer-wrap
+                          .course-detail__reviewer-col
+                            .course-detail__reviewer-img
+                              img(loading="lazy"  src="images/dist/profile.webp", alt="")
+                          .course-detail__reviewer-col
+                            .course-detail__reviewer-theme Курс: Deutsch Basic 1 (A2.1)
+                            .course-detail__reviewer-name Екатерина Гречко
+                            .course-detail__reviewer-rating(data-rating=star)
+                              .course-detail__reviewer-rating-star
+                                svg(width='18' height='17' viewBox='0 0 18 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                  path(d='M9.02683 0L11.1492 6.08754L17.6119 6.21885L12.4608 10.1125L14.3327 16.2812L9.02683 12.6L3.72099 16.2812L5.59282 10.1125L0.441805 6.21885L6.9045 6.08754L9.02683 0Z')
+                                
+                              .course-detail__reviewer-rating-star
+                                svg(width='18' height='17' viewBox='0 0 18 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                  path(d='M9.02683 0L11.1492 6.08754L17.6119 6.21885L12.4608 10.1125L14.3327 16.2812L9.02683 12.6L3.72099 16.2812L5.59282 10.1125L0.441805 6.21885L6.9045 6.08754L9.02683 0Z')
+                                
+                              .course-detail__reviewer-rating-star
+                                svg(width='18' height='17' viewBox='0 0 18 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                  path(d='M9.02683 0L11.1492 6.08754L17.6119 6.21885L12.4608 10.1125L14.3327 16.2812L9.02683 12.6L3.72099 16.2812L5.59282 10.1125L0.441805 6.21885L6.9045 6.08754L9.02683 0Z')
+                                
+                              .course-detail__reviewer-rating-star
+                                svg(width='18' height='17' viewBox='0 0 18 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                  path(d='M9.02683 0L11.1492 6.08754L17.6119 6.21885L12.4608 10.1125L14.3327 16.2812L9.02683 12.6L3.72099 16.2812L5.59282 10.1125L0.441805 6.21885L6.9045 6.08754L9.02683 0Z')
+                                
+                              .course-detail__reviewer-rating-star
+                                svg(width='18' height='17' viewBox='0 0 18 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                  path(d='M9.02683 0L11.1492 6.08754L17.6119 6.21885L12.4608 10.1125L14.3327 16.2812L9.02683 12.6L3.72099 16.2812L5.59282 10.1125L0.441805 6.21885L6.9045 6.08754L9.02683 0Z')
+                                
+                              
+
+
+                        .text 
+                          p Чудовий курс, велике спасибі Ользі за такі корисні знання, Ви незрівнянні!
+                      
+                  +rating(2)
+                  +rating(3)
+                  +rating(4)
+                  
+              .course-detail__flex-col
+                .typical-block 
+                  h3.title.title--h3.title--colored-small(data-aos="zoom-in")
+                    .title__wrap Тарифи
+                  .course-detail__rates-wrap
+                    .course-detail__rate
+                      .course-detail__rate-wrap
+                        .course-detail__rate-name.solid-radial Базовий
+                        
+                        br
+                        br
+
+                        .course-detail__rate-title складова курсу:
+                        ul.column 
+                          li 12 видео лекций
+                          li Практические задания к каждому уроку с ответами в отдельном файле (pdf)
+                          li Чек-лист (pdf) и аудио записи с новыми словами к каждой лекции
+                          li Лист прогресса, чтобы отслеживать свои успехи (pdf)
+                          li Финальный тест по завершению курса
+                          li Доступ к курсу - 6 месяцев
+
+                        .course-detail__rate-title 
+                          .course-detail__rate-icon
+                            svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                              path(d='M2.2915 8.33329C2.2915 7.98812 2.57133 7.70829 2.9165 7.70829H17.0832C17.4283 7.70829 17.7082 7.98812 17.7082 8.33329V18.3333C17.7082 18.6785 17.4283 18.9583 17.0832 18.9583H2.9165C2.57133 18.9583 2.2915 18.6785 2.2915 18.3333V8.33329ZM3.5415 8.95829V17.7083H16.4582V8.95829H3.5415Z' fill='#F8A5D5')
+                              path(d='M9.99984 7.70829C10.345 7.70829 10.6248 7.98812 10.6248 8.33329V18.3333C10.6248 18.6785 10.345 18.9583 9.99984 18.9583C9.65466 18.9583 9.37484 18.6785 9.37484 18.3333V8.33329C9.37484 7.98812 9.65466 7.70829 9.99984 7.70829Z' fill='#F8A5D5')
+                              path(fill-rule='evenodd' clip-rule='evenodd' d='M2.2915 18.3333C2.2915 17.9881 2.57133 17.7083 2.9165 17.7083H17.0832C17.4283 17.7083 17.7082 17.9881 17.7082 18.3333C17.7082 18.6785 17.4283 18.9583 17.0832 18.9583H2.9165C2.57133 18.9583 2.2915 18.6785 2.2915 18.3333Z' fill='#F8A5D5')
+                              path(d='M1.0415 4.99996C1.0415 4.65478 1.32133 4.37496 1.6665 4.37496H18.3332C18.6783 4.37496 18.9582 4.65478 18.9582 4.99996V8.33329C18.9582 8.67847 18.6783 8.95829 18.3332 8.95829H1.6665C1.32133 8.95829 1.0415 8.67847 1.0415 8.33329V4.99996ZM2.2915 5.62496V7.70829H17.7082V5.62496H2.2915Z' fill='#F8A5D5')
+                              path(d='M6.22456 1.22468C6.46864 0.980607 6.86437 0.980607 7.10845 1.22468L9.99984 4.11608L12.8912 1.22468C13.1353 0.980607 13.531 0.980607 13.7751 1.22468C14.0192 1.46876 14.0192 1.86449 13.7751 2.10857L10.4418 5.4419C10.1977 5.68598 9.80197 5.68598 9.5579 5.4419L6.22456 2.10857C5.98048 1.86449 5.98048 1.46876 6.22456 1.22468Z' fill='#F8A5D5')
+
+                          | Бонусы:
+
+                        ul
+                          li Участие в розыгрыше бесплатного курса для тех, кто пройдет финальный тест на 90% и выше
+                          li Скидка на любой курс для всех, кто завершит курс и пройдет финальное тестирование
+                          li Доступ до закритого чату в Телеграм для студентів, де можна задавати питання за матеріалами уроків. Відповідає – особисто Ольга Назаренко  
+
+                        .course-detail__rate-title Вибрати мову курсу
+                        .course-detail__rate-btn-wrap 
+                          a.solid-radial.solid-radial--btn.solid-radial--wc(href="#") українською     
+                          a.solid-radial.solid-radial--btn.solid-radial--wc(href="#") росiйською    
+                        
+                      .typical-block__bottom 
+                        .course-detail__rate-price 94.00€
+                        a.solid-radial.solid-radial--btn.solid-radial--wc(href="#") покласти в кошик    
+                      
+                    .course-detail__rate
+                      .course-detail__rate-wrap
+                        .course-detail__rate-name.solid-radial Плюс
+                        
+                        br
+                        br
+
+                        .course-detail__rate-title складова курсу:
+                        ul.column 
+                          li 12 видео лекций
+                          li Практические задания к каждому уроку с ответами в отдельном файле (pdf)
+                          li Чек-лист (pdf) и аудио записи с новыми словами к каждой лекции
+                          li Лист прогресса, чтобы отслеживать свои успехи (pdf)
+                          li Финальный тест по завершению курса
+                          li Доступ к курсу - 6 месяцев
+
+                        .course-detail__rate-title 
+                          .course-detail__rate-icon
+                            svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                              path(d='M2.2915 8.33329C2.2915 7.98812 2.57133 7.70829 2.9165 7.70829H17.0832C17.4283 7.70829 17.7082 7.98812 17.7082 8.33329V18.3333C17.7082 18.6785 17.4283 18.9583 17.0832 18.9583H2.9165C2.57133 18.9583 2.2915 18.6785 2.2915 18.3333V8.33329ZM3.5415 8.95829V17.7083H16.4582V8.95829H3.5415Z' fill='#F8A5D5')
+                              path(d='M9.99984 7.70829C10.345 7.70829 10.6248 7.98812 10.6248 8.33329V18.3333C10.6248 18.6785 10.345 18.9583 9.99984 18.9583C9.65466 18.9583 9.37484 18.6785 9.37484 18.3333V8.33329C9.37484 7.98812 9.65466 7.70829 9.99984 7.70829Z' fill='#F8A5D5')
+                              path(fill-rule='evenodd' clip-rule='evenodd' d='M2.2915 18.3333C2.2915 17.9881 2.57133 17.7083 2.9165 17.7083H17.0832C17.4283 17.7083 17.7082 17.9881 17.7082 18.3333C17.7082 18.6785 17.4283 18.9583 17.0832 18.9583H2.9165C2.57133 18.9583 2.2915 18.6785 2.2915 18.3333Z' fill='#F8A5D5')
+                              path(d='M1.0415 4.99996C1.0415 4.65478 1.32133 4.37496 1.6665 4.37496H18.3332C18.6783 4.37496 18.9582 4.65478 18.9582 4.99996V8.33329C18.9582 8.67847 18.6783 8.95829 18.3332 8.95829H1.6665C1.32133 8.95829 1.0415 8.67847 1.0415 8.33329V4.99996ZM2.2915 5.62496V7.70829H17.7082V5.62496H2.2915Z' fill='#F8A5D5')
+                              path(d='M6.22456 1.22468C6.46864 0.980607 6.86437 0.980607 7.10845 1.22468L9.99984 4.11608L12.8912 1.22468C13.1353 0.980607 13.531 0.980607 13.7751 1.22468C14.0192 1.46876 14.0192 1.86449 13.7751 2.10857L10.4418 5.4419C10.1977 5.68598 9.80197 5.68598 9.5579 5.4419L6.22456 2.10857C5.98048 1.86449 5.98048 1.46876 6.22456 1.22468Z' fill='#F8A5D5')
+
+                          | Бонусы:
+
+                        ul
+                          li Участие в розыгрыше бесплатного курса для тех, кто пройдет финальный тест на 90% и выше
+                          li Скидка на любой курс для всех, кто завершит курс и пройдет финальное тестирование
+                          li Доступ до закритого чату в Телеграм для студентів, де можна задавати питання за матеріалами уроків. Відповідає – особисто Ольга Назаренко  
+
+                        .course-detail__rate-additional-info
+                          
+                          .course-detail__rate-additional-info-title 
+                            span Тільки в PLUS
+
+                          ul
+                            li Объемный модуль с лексикой. Более 800 полезных слов для новичков в немецком
+                            li 19 аудіофайлів загальною тривалістю 3 години, в яких ви чуєте слова німецькою в однині і в множин з артиклями, переклад на українську мову і під час пауз промовляєте ці слова самостійно
+                            li Робочий зошит в форматі pdf, в якому зручно за темами зафіксовані всі слова в письмовому вигляді                              
+                              
+                              
+                              
+
+                        .course-detail__rate-title Вибрати мову курсу
+                        .course-detail__rate-btn-wrap 
+                          a.solid-radial.solid-radial--btn.solid-radial--wc(href="#") українською     
+                          a.solid-radial.solid-radial--btn.solid-radial--wc(href="#") росiйською    
+                        
+                      .typical-block__bottom 
+                        .course-detail__rate-price 94.00€
+                        a.solid-radial.solid-radial--btn.solid-radial--wc(href="#") покласти в кошик    
+
+
+    include includes/footer
+
+
+  include includes/scripts 

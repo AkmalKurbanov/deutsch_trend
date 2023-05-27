@@ -1,0 +1,22 @@
+.ordering
+  &__flex-wrap
+    @include jfcsb
+    
+  &__flex-col
+    width: 100%
+    
+    &:first-child
+      max-width: rem(755)
+    
+    &:last-child
+      max-width: rem(445)
+      
+  &__form-wrap
+    @include fww-jfcsb
+
+    .input-wrap
+      width: calc( 50% - 15px )
+
+      &--select
+        width: 100%
+  

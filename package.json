@@ -47,11 +47,14 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "aos": "^2.3.4",
     "intl-tel-input": "^17.0.19",
     "jquery": "^3.6.2",
     "jquery-lazy": "^1.7.11",
     "normalize.css": "^8.0.1",
+    "plyr": "^3.7.8",
     "save-dev": "^0.0.1-security",
-    "swiper": "^8.4.5"
+    "swiper": "^8.4.7"
   }
 }

@@ -1,0 +1,76 @@
+extends layouts/main
+
+block variables
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | Історія замовлень | DEUTSCH TREND
+block main
+  .wrapper
+    .content
+      include includes/header-inside
+      
+      
+      .container
+        h1.title.title--h1 Історія замовлень
+
+        .bread-crumbs
+          ul 
+            li 
+              a(href="#") Головна
+            li 
+              a(href="#") Мій акаунт
+
+            li Історія замовлень
+
+          a.btn.btn--primary(href="#")  Перейти на сторінку всіх курсів
+      
+      
+      .gray-bg 
+        .container
+          .typical-block.history
+            table.history__table.table 
+              tr 
+                th Дата
+                th Курс
+                th Ціна
+                th Вид оплати
+                th 
+
+              tr 
+                td 29.04.2023
+                td.table__course
+                  .table__course-wrap
+                    img(loading="lazy"  src="images/dist/beginners1.webp", alt="") 
+                    | Deutsch Basic 1 (A1.1)
+                td.table__price 94.00€
+                td.table__payment Оплата кредитною карткою
+                td 
+                  a.btn.btn--primary(href="#")  перейти до курсу
+              
+
+              tr 
+                td.table__date 09.05.2023
+                td.table__course
+                  .table__course-wrap
+                    img(loading="lazy"  src="images/dist/beginners2.webp", alt="") 
+                    | Deutsch Basic 1 (A2.1)
+                td.table__price 94.00€
+                td.table__payment Оплата кредитною карткою
+                
+                
+
+
+
+     
+
+    
+    include includes/footer
+
+
+  include includes/scripts 

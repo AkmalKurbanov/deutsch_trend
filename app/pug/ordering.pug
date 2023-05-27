@@ -1,0 +1,128 @@
+extends layouts/main
+
+block variables
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | Оформлення замовлення | DEUTSCH TREND
+block main
+  .wrapper
+    .content
+      include includes/header-inside
+      
+      
+      .container
+        h1.title.title--h1 Оформлення замовлення
+
+        .bread-crumbs
+          ul 
+            li 
+              a(href="#") Головна
+              
+            li Оформлення замовлення
+
+          a.btn.btn--primary(href="#")  Перейти на сторінку всіх курсів
+      
+      .gray-bg.ordering
+        .container
+          .ordering__flex-wrap
+            .ordering__flex-col
+              .typical-block 
+                form(action="#") 
+                  .ordering__form 
+                    .typical-block__title Деталі замовлення
+
+                    .ordering__form-wrap
+                      .input-wrap
+                        label(for="name") Им’я
+                        .input
+                          input(type="text" name="Им’я")#name
+                      .input-wrap
+                        label(for="surname") Прізвище
+                        .input
+                          input(type="text" name="Прізвище")#surname
+                    
+                      .input-wrap.input-wrap--select
+                        label Країна/Регіон 
+                          span.optional Опціонально 
+                        .select
+                          .select__selected
+                            input(type="hidden" value="")
+                            span Виберіть країну / регіон
+                            .select__arrow 
+                              svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(d='M4.97468 7.05806C5.21876 6.81398 5.61449 6.81398 5.85857 7.05806L10.4166 11.6161L14.9747 7.05806C15.2188 6.81398 15.6145 6.81398 15.8586 7.05806C16.1026 7.30214 16.1026 7.69786 15.8586 7.94194L10.8586 12.9419C10.6145 13.186 10.2188 13.186 9.97468 12.9419L4.97468 7.94194C4.73061 7.69786 4.73061 7.30214 4.97468 7.05806Z' fill='#BABABA')
+                          .select__dropdown.shadow
+                            .select__dropdown-option(data-option="Область 1") Область 1 
+                            .select__dropdown-option(data-option="Область 2") Область 2 
+                            .select__dropdown-option(data-option="Область 3") Область 3  
+                            .select__dropdown-option(data-option="Область 4") Область 4  
+
+                      .input-wrap
+                        label(for="phone") Номер телефону
+                          span.optional Опціонально 
+                        .input
+                          input(type="text" name="Номер телефону")#phone
+
+                      .input-wrap
+                        label(for="email") Email
+                        .input
+                          input(type="text" name="Email")#email
+
+            .ordering__flex-col
+              .typical-block
+                .typical-block__total
+
+                  .typical-block__title Ваше замовлення
+                  
+                  .typical-block__total-item
+                    .typical-block__sum 
+                      span Deutsch Basic 1 (A1.1)
+                      span 94.00€
+                  
+                    .typical-block__sum 
+                      span Deutsch Basic 1 (A1.1)
+                      span 94.00€
+                  
+                  .typical-block__total-item
+                  
+                    .typical-block__sum 
+                      span Підсумок
+                      span 188.00€
+
+                    .typical-block__total-sum
+                      span ЗАГАЛОМ
+                      span 188.00€
+
+
+                  .typical-block__total-item
+                    .radio
+                      .radio__wrap
+                        input(type="radio" name="payment_type")#card
+                        span
+                        label(for="card") Оплата кредитною карткою
+                    .radio
+                      .radio__wrap
+                        input(type="radio" name="payment_type")#payPal
+                        span
+                        label(for="payPal") Переказ на PayPal
+                    .radio
+                      .radio__wrap
+                        input(type="radio" name="payment_type")#visa
+                        span
+                        label(for="visa") Переказ на карту VISA (в гривнях)
+                      
+                    p Натискаючи кнопку "Підтвердити замовлення", Я згоден з користувацькою угодою цього сайту і з тим, що даний інформаційний продукт в онлайн 
+                    a.btn.btn--secondary(href="#") Оформити замовлення
+     
+
+    
+    include includes/footer
+
+
+  include includes/scripts 

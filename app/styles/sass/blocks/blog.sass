@@ -1,0 +1,41 @@
+.blog
+  margin-top: rem(50)
+  margin-bottom: rem(10)
+
+  &__flex-wrap
+    @include fww
+  
+  &__wrap
+    @include aife-jfcsb
+    margin-bottom: rem(40)
+
+  &__item
+    width: calc( 33.33% - 15px )
+    background: $white
+    margin-bottom: rem(40)
+    margin-right: rem(22.5)  
+    border-radius: rem(16)
+    overflow: hidden
+
+    &:nth-child(3n)
+      margin-right: 0
+      
+    
+    &-preview
+      @include aic-jcc
+      position: relative
+      min-height: rem(200)
+      
+      svg
+        opacity: 0.8
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+      &:hover
+        svg
+          opacity: 1
+
+    &-bottom
+      padding: rem(15) rem(20)      
+

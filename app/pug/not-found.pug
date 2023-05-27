@@ -1,0 +1,45 @@
+extends layouts/main
+
+block variables
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+  
+
+block title
+  | 404 сторінка не знайдена | DEUTSCH TREND
+block main
+  .wrapper
+    .content
+      include includes/header-inside
+      
+      .not-found.container
+        .not-found__window-wrap
+          
+          .stroke-primary(data-aos="zoom-in")
+          .not-found__message-window.typical-block
+            h2.title.title--h2
+              span 404
+              | Сталася помилка, сторінка не знайдена.
+            p Сторінка, яку ви шукали, найімовірніше, вже не існує.
+            a.btn.btn--primary(href="#") Перейти на сторінку всіх курсів    
+          
+          .stroke-primary(data-aos="zoom-in")
+
+
+
+
+
+      
+      
+         
+     
+
+    
+    include includes/footer
+
+
+  include includes/scripts 
